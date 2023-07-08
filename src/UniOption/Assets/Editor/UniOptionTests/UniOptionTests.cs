@@ -336,6 +336,22 @@ public class UniOptionTests {
         Assert.IsTrue(stringOption == "AnotherString");
     }
 
+    [Test]
+    public void OptionMatch() {
+        var option = "Hello World".ToOption();
+        var result = option.Match(some: s => s.ToUpper(),
+                                  none: () => "Default");
+        Assert.IsTrue(result == "HELLO WORLD");
+    }
+
+    [Test]
+    public void ValueOptionMatch() {
+        var option = 5.ToValueOption();
+        var result = option.Match(some: s => s.ToString(),
+                                  none: () => "Default");
+        Assert.IsTrue(result == "5");
+    }
+
     [UnityTest]
     public IEnumerator OptionDoAsync() => UniTask.ToCoroutine(async () => {
         var upperOption = string.Empty;

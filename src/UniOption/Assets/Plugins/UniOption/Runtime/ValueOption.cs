@@ -17,13 +17,14 @@ namespace UniOption {
         public ValueOption<TResult> Map<TResult>(Func<T, TResult> map) where TResult : struct      => new(IsSome ? map(_content!.Value) : null);
         public Option<TResult>      MapObject<TResult>(Func<T, TResult> map) where TResult : class => IsSome ? map(_content!.Value) : Option<TResult>.None;
 
-        public bool           IsSomeAnd(Func<T, bool> predicate) => IsSome && predicate(_content!.Value);
-        public T              Reduce()                           => _content ?? default(T);
-        public T              Reduce(T ifNone)                   => _content ?? ifNone;
-        public T              Reduce(Func<T> ifNone)             => _content ?? ifNone();
-        public ValueOption<T> Where(Func<T, bool> predicate)     => IsSome && predicate(_content!.Value) ? this : None;
-        public ValueOption<T> WhereNot(Func<T, bool> predicate)  => IsSome && !predicate(_content!.Value) ? this : None;
-        public ValueOption<T> Or(T orOption)                     => IsNone ? orOption : this;
+        public bool           IsSomeAnd(Func<T, bool> predicate)                        => IsSome && predicate(_content!.Value);
+        public T              Reduce()                                                  => _content ?? default(T);
+        public T              Reduce(T ifNone)                                          => _content ?? ifNone;
+        public T              Reduce(Func<T> ifNone)                                    => _content ?? ifNone();
+        public ValueOption<T> Where(Func<T, bool> predicate)                            => IsSome && predicate(_content!.Value) ? this : None;
+        public ValueOption<T> WhereNot(Func<T, bool> predicate)                         => IsSome && !predicate(_content!.Value) ? this : None;
+        public ValueOption<T> Or(T orOption)                                            => IsNone ? orOption : this;
+        public TResult        Match<TResult>(Func<T, TResult> some, Func<TResult> none) => IsSome ? some(_content!.Value) : none();
 
         public IEnumerable<T> ToEnumerable() => IsSome ? new[] { _content!.Value } : Array.Empty<T>();
 

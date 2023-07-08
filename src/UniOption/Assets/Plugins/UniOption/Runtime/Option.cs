@@ -20,14 +20,15 @@ namespace UniOption {
         public ValueOption<TResult> MapValue<TResult>(Func<T, TResult> map) where TResult : struct =>
             IsSome ? ValueOption<TResult>.Some(map(_content!)) : ValueOption<TResult>.None;
 
-        public bool           IsSomeAnd(Func<T, bool> predicate)    => IsSome && predicate(_content!);
-        public T              Reduce(T defaultValue)                => _content ?? defaultValue;
-        public T              Reduce(Func<T> defaultValue)          => _content ?? defaultValue();
-        public Option<T>      Where(Func<T, bool> predicate)        => IsNone || predicate(_content!) ? this : None;
-        public Option<T>      WhereNot(Func<T, bool> predicate)     => IsNone || !predicate(_content!) ? this : None;
+        public bool           IsSomeAnd(Func<T, bool> predicate) => IsSome && predicate(_content!);
+        public T              Reduce(T defaultValue) => _content ?? defaultValue;
+        public T              Reduce(Func<T> defaultValue) => _content ?? defaultValue();
+        public Option<T>      Where(Func<T, bool> predicate) => IsNone || predicate(_content!) ? this : None;
+        public Option<T>      WhereNot(Func<T, bool> predicate) => IsNone || !predicate(_content!) ? this : None;
         public Option<TValue> OfType<TValue>() where TValue : class => _content is TValue content ? Option<TValue>.Some(content) : Option<TValue>.None;
-        public Option<T>      Or(T orOption)                        => IsNone ? orOption : this;
-        public IEnumerable<T> ToEnumerable()                        => (IsSome ? new[] { _content } : Array.Empty<T>())!;
+        public Option<T>      Or(T orOption) => IsNone ? orOption : this;
+        public TResult        Match<TResult>(Func<T, TResult> some, Func<TResult> none) => IsSome ? some(_content!) : none();
+        public IEnumerable<T> ToEnumerable() => (IsSome ? new[] { _content } : Array.Empty<T>())!;
 
         public Option<T> Do(Action<T> ifSome) {
             if (IsSome) ifSome(_content!);
