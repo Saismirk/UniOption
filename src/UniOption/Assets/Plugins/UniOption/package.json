@@ -1,0 +1,14 @@
+{
+  "name": "com.sai.unioption",
+  "displayName": "UniTask",
+  "author": { "name": "Sai" },
+  "version": "0.1.0",
+  "unity": "2021.3",
+  "description": "Provides an efficient async/await integration to Unity.",
+  "keywords": [ "async/await", "async", "Task", "UniTask" ],
+  "license": "MIT",
+  "category": "Task",
+  "dependencies": {
+    "com.cysharp.unitask": "2.3.3"
+  }
+}
