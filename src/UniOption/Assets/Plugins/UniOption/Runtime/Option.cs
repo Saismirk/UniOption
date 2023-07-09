@@ -21,6 +21,7 @@ namespace UniOption {
             IsSome ? ValueOption<TResult>.Some(map(_content!)) : ValueOption<TResult>.None;
 
         public bool           IsSomeAnd(Func<T, bool> predicate) => IsSome && predicate(_content!);
+        public T?             Reduce() => _content ?? default;
         public T              Reduce(T defaultValue) => _content ?? defaultValue;
         public T              Reduce(Func<T> defaultValue) => _content ?? defaultValue();
         public Option<T>      Where(Func<T, bool> predicate) => IsNone || predicate(_content!) ? this : None;
@@ -29,6 +30,9 @@ namespace UniOption {
         public Option<T>      Or(T orOption) => IsNone ? orOption : this;
         public TResult        Match<TResult>(Func<T, TResult> some, Func<TResult> none) => IsSome ? some(_content!) : none();
         public IEnumerable<T> ToEnumerable() => (IsSome ? new[] { _content } : Array.Empty<T>())!;
+
+        public Option<Tuple<T, T2>> ZipTuple<T2>(T2 other) where T2 : class =>
+            IsSome ? Option<Tuple<T, T2>>.Some(new Tuple<T, T2>(_content!, other)) : Option<Tuple<T, T2>>.None;
 
         public Option<T> Do(Action<T> ifSome) {
             if (IsSome) ifSome(_content!);

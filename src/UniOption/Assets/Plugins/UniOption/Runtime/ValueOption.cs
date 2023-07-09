@@ -27,6 +27,9 @@ namespace UniOption {
         public TResult        Match<TResult>(Func<T, TResult> some, Func<TResult> none) => IsSome ? some(_content!.Value) : none();
 
         public IEnumerable<T> ToEnumerable() => IsSome ? new[] { _content!.Value } : Array.Empty<T>();
+        public ValueOption<ValueTuple<T, T2>> ZipTuple<T2>(T2 other) where T2 : struct =>
+            IsSome ? ValueOption<ValueTuple<T, T2>>.Some(new ValueTuple<T, T2>(_content!.Value, other)) : ValueOption<ValueTuple<T, T2>>.None;
+        public ValueOption<(T,T2)> Zip<T2>(T2 other) where T2 : struct => IsSome ? ValueOption<(T,T2)>.Some((_content!.Value, other)) : ValueOption<(T,T2)>.None;
 
         public ValueOption<T> Do(Action<T> ifSome) {
             if (_content.HasValue) ifSome(_content.Value);
