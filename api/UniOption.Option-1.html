@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Option&lt;T&gt;
    | UniOption Documentation ">
-    <meta name="generator" content="docfx 2.59.2.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -90,7 +90,7 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Option&lt;T&gt;</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="UniOption.IOption.html">IOption</a></div>
   </div>
@@ -100,13 +100,13 @@
       <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
     </div>
     <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
       <span class="xref">System.Object.GetType()</span>
     </div>
     <div>
       <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="UniOption.html">UniOption</a></h6>
@@ -204,7 +204,7 @@
   <h3 id="methods">Methods
   </h3>
   <a id="UniOption_Option_1_Do_" data-uid="UniOption.Option`1.Do*"></a>
-  <h4 id="UniOption_Option_1_Do_System_Action__0__" data-uid="UniOption.Option`1.Do(System.Action{`0})">Do(Action&lt;T&gt;)</h4>
+  <h4 id="UniOption_Option_1_Do_Action__0__" data-uid="UniOption.Option`1.Do(Action{`0})">Do(Action&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -222,7 +222,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;T&gt;</td>
+        <td><span class="xref">Action</span>&lt;T&gt;</td>
         <td><span class="parametername">ifSome</span></td>
         <td></td>
       </tr>
@@ -244,7 +244,7 @@
     </tbody>
   </table>
   <a id="UniOption_Option_1_Do_" data-uid="UniOption.Option`1.Do*"></a>
-  <h4 id="UniOption_Option_1_Do_System_Action__0__System_Action_" data-uid="UniOption.Option`1.Do(System.Action{`0},System.Action)">Do(Action&lt;T&gt;, Action)</h4>
+  <h4 id="UniOption_Option_1_Do_Action__0__Action_" data-uid="UniOption.Option`1.Do(Action{`0},Action)">Do(Action&lt;T&gt;, Action)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -262,12 +262,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;T&gt;</td>
+        <td><span class="xref">Action</span>&lt;T&gt;</td>
         <td><span class="parametername">ifSome</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><span class="xref">Action</span></td>
         <td><span class="parametername">ifNone</span></td>
         <td></td>
       </tr>
@@ -289,7 +289,7 @@
     </tbody>
   </table>
   <a id="UniOption_Option_1_DoAsync_" data-uid="UniOption.Option`1.DoAsync*"></a>
-  <h4 id="UniOption_Option_1_DoAsync_System_Func__0_UniTask__" data-uid="UniOption.Option`1.DoAsync(System.Func{`0,UniTask})">DoAsync(Func&lt;T, UniTask&gt;)</h4>
+  <h4 id="UniOption_Option_1_DoAsync_Func__0_UniTask__" data-uid="UniOption.Option`1.DoAsync(Func{`0,UniTask})">DoAsync(Func&lt;T, UniTask&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -307,7 +307,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">UniTask</span>&gt;</td>
+        <td><span class="xref">Func</span>&lt;T, <span class="xref">UniTask</span>&gt;</td>
         <td><span class="parametername">ifSome</span></td>
         <td></td>
       </tr>
@@ -329,7 +329,7 @@
     </tbody>
   </table>
   <a id="UniOption_Option_1_DoAsync_" data-uid="UniOption.Option`1.DoAsync*"></a>
-  <h4 id="UniOption_Option_1_DoAsync_System_Func__0_UniTask__System_Func_UniTask__" data-uid="UniOption.Option`1.DoAsync(System.Func{`0,UniTask},System.Func{UniTask})">DoAsync(Func&lt;T, UniTask&gt;, Func&lt;UniTask&gt;)</h4>
+  <h4 id="UniOption_Option_1_DoAsync_Func__0_UniTask__Func_UniTask__" data-uid="UniOption.Option`1.DoAsync(Func{`0,UniTask},Func{UniTask})">DoAsync(Func&lt;T, UniTask&gt;, Func&lt;UniTask&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -347,12 +347,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">UniTask</span>&gt;</td>
+        <td><span class="xref">Func</span>&lt;T, <span class="xref">UniTask</span>&gt;</td>
         <td><span class="parametername">ifSome</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">UniTask</span>&gt;</td>
+        <td><span class="xref">Func</span>&lt;<span class="xref">UniTask</span>&gt;</td>
         <td><span class="parametername">ifNone</span></td>
         <td></td>
       </tr>
@@ -481,7 +481,7 @@
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.Object.GetHashCode()</span></div>
   <a id="UniOption_Option_1_IsSomeAnd_" data-uid="UniOption.Option`1.IsSomeAnd*"></a>
-  <h4 id="UniOption_Option_1_IsSomeAnd_System_Func__0_System_Boolean__" data-uid="UniOption.Option`1.IsSomeAnd(System.Func{`0,System.Boolean})">IsSomeAnd(Func&lt;T, Boolean&gt;)</h4>
+  <h4 id="UniOption_Option_1_IsSomeAnd_Func__0_System_Boolean__" data-uid="UniOption.Option`1.IsSomeAnd(Func{`0,System.Boolean})">IsSomeAnd(Func&lt;T, Boolean&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -499,7 +499,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Func</span>&lt;T, <span class="xref">System.Boolean</span>&gt;</td>
         <td><span class="parametername">predicate</span></td>
         <td></td>
       </tr>
@@ -521,7 +521,7 @@
     </tbody>
   </table>
   <a id="UniOption_Option_1_Map_" data-uid="UniOption.Option`1.Map*"></a>
-  <h4 id="UniOption_Option_1_Map__1_System_Func__0___0__" data-uid="UniOption.Option`1.Map``1(System.Func{`0,``0})">Map&lt;TResult&gt;(Func&lt;T, TResult&gt;)</h4>
+  <h4 id="UniOption_Option_1_Map__1_Func__0___0__" data-uid="UniOption.Option`1.Map``1(Func{`0,``0})">Map&lt;TResult&gt;(Func&lt;T, TResult&gt;)</h4>
   <div class="markdown level1 summary"><p>Maps the content of this option to another option.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -541,7 +541,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;T, TResult&gt;</td>
+        <td><span class="xref">Func</span>&lt;T, TResult&gt;</td>
         <td><span class="parametername">map</span></td>
         <td></td>
       </tr>
@@ -578,7 +578,7 @@
     </tbody>
   </table>
   <a id="UniOption_Option_1_MapValue_" data-uid="UniOption.Option`1.MapValue*"></a>
-  <h4 id="UniOption_Option_1_MapValue__1_System_Func__0___0__" data-uid="UniOption.Option`1.MapValue``1(System.Func{`0,``0})">MapValue&lt;TResult&gt;(Func&lt;T, TResult&gt;)</h4>
+  <h4 id="UniOption_Option_1_MapValue__1_Func__0___0__" data-uid="UniOption.Option`1.MapValue``1(Func{`0,``0})">MapValue&lt;TResult&gt;(Func&lt;T, TResult&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -597,7 +597,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;T, TResult&gt;</td>
+        <td><span class="xref">Func</span>&lt;T, TResult&gt;</td>
         <td><span class="parametername">map</span></td>
         <td></td>
       </tr>
@@ -634,7 +634,7 @@
     </tbody>
   </table>
   <a id="UniOption_Option_1_Match_" data-uid="UniOption.Option`1.Match*"></a>
-  <h4 id="UniOption_Option_1_Match__1_System_Func__0___0__System_Func___0__" data-uid="UniOption.Option`1.Match``1(System.Func{`0,``0},System.Func{``0})">Match&lt;TResult&gt;(Func&lt;T, TResult&gt;, Func&lt;TResult&gt;)</h4>
+  <h4 id="UniOption_Option_1_Match__1_Func__0___0__Func___0__" data-uid="UniOption.Option`1.Match``1(Func{`0,``0},Func{``0})">Match&lt;TResult&gt;(Func&lt;T, TResult&gt;, Func&lt;TResult&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -652,12 +652,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;T, TResult&gt;</td>
+        <td><span class="xref">Func</span>&lt;T, TResult&gt;</td>
         <td><span class="parametername">some</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;TResult&gt;</td>
+        <td><span class="xref">Func</span>&lt;TResult&gt;</td>
         <td><span class="parametername">none</span></td>
         <td></td>
       </tr>
@@ -836,7 +836,7 @@
     </tbody>
   </table>
   <a id="UniOption_Option_1_Reduce_" data-uid="UniOption.Option`1.Reduce*"></a>
-  <h4 id="UniOption_Option_1_Reduce_System_Func__0__" data-uid="UniOption.Option`1.Reduce(System.Func{`0})">Reduce(Func&lt;T&gt;)</h4>
+  <h4 id="UniOption_Option_1_Reduce_Func__0__" data-uid="UniOption.Option`1.Reduce(Func{`0})">Reduce(Func&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -854,7 +854,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;T&gt;</td>
+        <td><span class="xref">Func</span>&lt;T&gt;</td>
         <td><span class="parametername">defaultValue</span></td>
         <td></td>
       </tr>
@@ -933,7 +933,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="xref">IEnumerable</span>&lt;T&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -964,7 +964,7 @@
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.Object.ToString()</span></div>
   <a id="UniOption_Option_1_Where_" data-uid="UniOption.Option`1.Where*"></a>
-  <h4 id="UniOption_Option_1_Where_System_Func__0_System_Boolean__" data-uid="UniOption.Option`1.Where(System.Func{`0,System.Boolean})">Where(Func&lt;T, Boolean&gt;)</h4>
+  <h4 id="UniOption_Option_1_Where_Func__0_System_Boolean__" data-uid="UniOption.Option`1.Where(Func{`0,System.Boolean})">Where(Func&lt;T, Boolean&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -982,7 +982,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Func</span>&lt;T, <span class="xref">System.Boolean</span>&gt;</td>
         <td><span class="parametername">predicate</span></td>
         <td></td>
       </tr>
@@ -1004,7 +1004,7 @@
     </tbody>
   </table>
   <a id="UniOption_Option_1_WhereNot_" data-uid="UniOption.Option`1.WhereNot*"></a>
-  <h4 id="UniOption_Option_1_WhereNot_System_Func__0_System_Boolean__" data-uid="UniOption.Option`1.WhereNot(System.Func{`0,System.Boolean})">WhereNot(Func&lt;T, Boolean&gt;)</h4>
+  <h4 id="UniOption_Option_1_WhereNot_Func__0_System_Boolean__" data-uid="UniOption.Option`1.WhereNot(Func{`0,System.Boolean})">WhereNot(Func&lt;T, Boolean&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1022,7 +1022,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Func</span>&lt;T, <span class="xref">System.Boolean</span>&gt;</td>
         <td><span class="parametername">predicate</span></td>
         <td></td>
       </tr>
