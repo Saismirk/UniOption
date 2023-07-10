@@ -137,10 +137,11 @@
 
   <h3 id="UniOption_ValueOption_1_IsNone" data-uid="UniOption.ValueOption`1.IsNone">
   IsNone
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this ValueOption has a None value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -168,10 +169,11 @@
 
   <h3 id="UniOption_ValueOption_1_IsSome" data-uid="UniOption.ValueOption`1.IsSome">
   IsSome
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this ValueOption has a Some value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -199,10 +201,11 @@
 
   <h3 id="UniOption_ValueOption_1_None" data-uid="UniOption.ValueOption`1.None">
   None
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets a ValueOption with a None value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -234,10 +237,11 @@
 
   <h3 id="UniOption_ValueOption_1_Do_Action__0__" data-uid="UniOption.ValueOption`1.Do(Action{`0})">
   Do(Action&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L136"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs the specified action on the value of this ValueOption if it has a Some value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -247,13 +251,15 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>ifSome</code> <span class="xref">Action</span>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>The action to perform if this ValueOption has a Some value.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="UniOption.ValueOption-1.html">ValueOption</a>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>This ValueOption.</p>
+</dd>
   </dl>
 
 
@@ -270,10 +276,11 @@
 
   <h3 id="UniOption_ValueOption_1_Do_Action__0__Action_" data-uid="UniOption.ValueOption`1.Do(Action{`0},Action)">
   Do(Action&lt;T&gt;, Action)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L147"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs the specified actions on the value of this ValueOption based on whether it has a Some value or a None value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -283,15 +290,18 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>ifSome</code> <span class="xref">Action</span>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>The action to perform if this ValueOption has a Some value.</p>
+</dd>
     <dt><code>ifNone</code> <span class="xref">Action</span></dt>
-    <dd></dd>
+    <dd><p>The action to perform if this ValueOption has a None value.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="UniOption.ValueOption-1.html">ValueOption</a>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>This ValueOption.</p>
+</dd>
   </dl>
 
 
@@ -308,10 +318,11 @@
 
   <h3 id="UniOption_ValueOption_1_DoAsync_Func__0_UniTask__" data-uid="UniOption.ValueOption`1.DoAsync(Func{`0,UniTask})">
   DoAsync(Func&lt;T, UniTask&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L158"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Asynchronously performs the specified async action on the value of this ValueOption if it has a Some value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -321,13 +332,15 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>ifSome</code> <span class="xref">Func</span>&lt;T, <span class="xref">UniTask</span>&gt;</dt>
-    <dd></dd>
+    <dd><p>The async action to perform if this ValueOption has a Some value.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">UniTask</span>&lt;<a class="xref" href="UniOption.ValueOption-1.html">ValueOption</a>&lt;T&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>A UniTask representing the asynchronous operation.</p>
+</dd>
   </dl>
 
 
@@ -344,10 +357,11 @@
 
   <h3 id="UniOption_ValueOption_1_DoAsync_Func__0_UniTask__Func_UniTask__" data-uid="UniOption.ValueOption`1.DoAsync(Func{`0,UniTask},Func{UniTask})">
   DoAsync(Func&lt;T, UniTask&gt;, Func&lt;UniTask&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L169"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Asynchronously performs the specified async actions on the value of this ValueOption based on whether it has a Some value or a None value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -357,15 +371,18 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>ifSome</code> <span class="xref">Func</span>&lt;T, <span class="xref">UniTask</span>&gt;</dt>
-    <dd></dd>
+    <dd><p>The async action to perform if this ValueOption has a Some value.</p>
+</dd>
     <dt><code>ifNone</code> <span class="xref">Func</span>&lt;<span class="xref">UniTask</span>&gt;</dt>
-    <dd></dd>
+    <dd><p>The async action to perform if this ValueOption has a None value.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">UniTask</span>&lt;<a class="xref" href="UniOption.ValueOption-1.html">ValueOption</a>&lt;T&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>A UniTask representing the asynchronous operation.</p>
+</dd>
   </dl>
 
 
@@ -382,7 +399,7 @@
 
   <h3 id="UniOption_ValueOption_1_Equals_System_Nullable_System_Object__" data-uid="UniOption.ValueOption`1.Equals(System.Nullable{System.Object})">
   Equals(object?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L178"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -418,7 +435,7 @@
 
   <h3 id="UniOption_ValueOption_1_Equals_UniOption_ValueOption__0__" data-uid="UniOption.ValueOption`1.Equals(UniOption.ValueOption{`0})">
   Equals(ValueOption&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L181"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -454,7 +471,7 @@
 
   <h3 id="UniOption_ValueOption_1_GetHashCode" data-uid="UniOption.ValueOption`1.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L177"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -485,10 +502,11 @@
 
   <h3 id="UniOption_ValueOption_1_IsSomeAnd_Func__0_System_Boolean__" data-uid="UniOption.ValueOption`1.IsSomeAnd(Func{`0,System.Boolean})">
   IsSomeAnd(Func&lt;T, bool&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Checks if this ValueOption has a Some value and satisfies the given predicate.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -498,13 +516,15 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>predicate</code> <span class="xref">Func</span>&lt;T, <span class="xref">bool</span>&gt;</dt>
-    <dd></dd>
+    <dd><p>The predicate to check.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">bool</span></dt>
-    <dd></dd>
+    <dd><p>True if this ValueOption has a Some value and satisfies the predicate; otherwise, false.</p>
+</dd>
   </dl>
 
 
@@ -521,10 +541,11 @@
 
   <h3 id="UniOption_ValueOption_1_MapObject__1_Func__0___0__" data-uid="UniOption.ValueOption`1.MapObject``1(Func{`0,``0})">
   MapObject&lt;TResult&gt;(Func&lt;T, TResult&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Applies a mapping function to the value of this ValueOption and returns a new Option with the result.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -534,19 +555,22 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>map</code> <span class="xref">Func</span>&lt;T, TResult&gt;</dt>
-    <dd></dd>
+    <dd><p>The mapping function.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="UniOption.Option-1.html">Option</a>&lt;TResult&gt;</dt>
-    <dd></dd>
+    <dd><p>An Option with the mapped value if this ValueOption has a Some value; otherwise, an Option with a None value.</p>
+</dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TResult</code></dt>
-    <dd></dd>
+    <dd><p>The type of the result value.</p>
+</dd>
   </dl>
 
 
@@ -562,10 +586,11 @@
 
   <h3 id="UniOption_ValueOption_1_Map__1_Func__0___0__" data-uid="UniOption.ValueOption`1.Map``1(Func{`0,``0})">
   Map&lt;TResult&gt;(Func&lt;T, TResult&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Applies a mapping function to the value of this ValueOption and returns a new ValueOption with the result.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -575,19 +600,22 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>map</code> <span class="xref">Func</span>&lt;T, TResult&gt;</dt>
-    <dd></dd>
+    <dd><p>The mapping function.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="UniOption.ValueOption-1.html">ValueOption</a>&lt;TResult&gt;</dt>
-    <dd></dd>
+    <dd><p>A ValueOption with the mapped value if this ValueOption has a Some value; otherwise, a ValueOption with a None value.</p>
+</dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TResult</code></dt>
-    <dd></dd>
+    <dd><p>The type of the result value.</p>
+</dd>
   </dl>
 
 
@@ -603,10 +631,11 @@
 
   <h3 id="UniOption_ValueOption_1_Match__1_Func__0___0__Func___0__" data-uid="UniOption.ValueOption`1.Match``1(Func{`0,``0},Func{``0})">
   Match&lt;TResult&gt;(Func&lt;T, TResult&gt;, Func&lt;TResult&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L105"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Matches the value of this ValueOption and applies the specified functions accordingly.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -616,21 +645,25 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>some</code> <span class="xref">Func</span>&lt;T, TResult&gt;</dt>
-    <dd></dd>
+    <dd><p>The function to apply if this ValueOption has a Some value.</p>
+</dd>
     <dt><code>none</code> <span class="xref">Func</span>&lt;TResult&gt;</dt>
-    <dd></dd>
+    <dd><p>The function to apply if this ValueOption has a None value.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">TResult</span></dt>
-    <dd></dd>
+    <dd><p>The result of applying the specified function to the value of this ValueOption.</p>
+</dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TResult</code></dt>
-    <dd></dd>
+    <dd><p>The type of the result.</p>
+</dd>
   </dl>
 
 
@@ -646,10 +679,11 @@
 
   <h3 id="UniOption_ValueOption_1_Or__0_" data-uid="UniOption.ValueOption`1.Or(`0)">
   Or(T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L96"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns this ValueOption if it has a Some value; otherwise, returns the specified alternative option.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -659,13 +693,15 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>orOption</code> <span class="xref">T</span></dt>
-    <dd></dd>
+    <dd><p>The alternative option to return if this ValueOption has a None value.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="UniOption.ValueOption-1.html">ValueOption</a>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>This ValueOption if it has a Some value; otherwise, the specified alternative option.</p>
+</dd>
   </dl>
 
 
@@ -682,10 +718,11 @@
 
   <h3 id="UniOption_ValueOption_1_Reduce" data-uid="UniOption.ValueOption`1.Reduce">
   Reduce()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L61"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the value of this ValueOption if it has a Some value; otherwise, returns the default value of type T.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -696,7 +733,8 @@
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd><p>The value of this ValueOption if it has a Some value; otherwise, the default value of type T.</p>
+</dd>
   </dl>
 
 
@@ -713,10 +751,11 @@
 
   <h3 id="UniOption_ValueOption_1_Reduce_Func__0__" data-uid="UniOption.ValueOption`1.Reduce(Func{`0})">
   Reduce(Func&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the value of this ValueOption if it has a Some value; otherwise, returns the value returned by the specified function.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -726,13 +765,15 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>ifNone</code> <span class="xref">Func</span>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>The function that returns the value to return if this ValueOption has a None value.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd><p>The value of this ValueOption if it has a Some value; otherwise, the value returned by the specified function.</p>
+</dd>
   </dl>
 
 
@@ -749,10 +790,11 @@
 
   <h3 id="UniOption_ValueOption_1_Reduce__0_" data-uid="UniOption.ValueOption`1.Reduce(`0)">
   Reduce(T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the value of this ValueOption if it has a Some value; otherwise, returns the specified value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -762,13 +804,15 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>ifNone</code> <span class="xref">T</span></dt>
-    <dd></dd>
+    <dd><p>The value to return if this ValueOption has a None value.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd></dd>
+    <dd><p>The value of this ValueOption if it has a Some value; otherwise, the specified value.</p>
+</dd>
   </dl>
 
 
@@ -785,10 +829,11 @@
 
   <h3 id="UniOption_ValueOption_1_Some__0_" data-uid="UniOption.ValueOption`1.Some(`0)">
   Some(T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a new ValueOption with a Some value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -798,13 +843,15 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>obj</code> <span class="xref">T</span></dt>
-    <dd></dd>
+    <dd><p>The value to wrap.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="UniOption.ValueOption-1.html">ValueOption</a>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>A ValueOption with the specified value.</p>
+</dd>
   </dl>
 
 
@@ -821,10 +868,11 @@
 
   <h3 id="UniOption_ValueOption_1_ToEnumerable" data-uid="UniOption.ValueOption`1.ToEnumerable">
   ToEnumerable()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts this ValueOption to an enumerable containing the value if it has a Some value; otherwise, returns an empty enumerable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -835,6 +883,38 @@
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">IEnumerable</span>&lt;T&gt;</dt>
+    <dd><p>An enumerable containing the value of this ValueOption if it has a Some value; otherwise, an empty enumerable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UniOption_ValueOption_1_ToString_" data-uid="UniOption.ValueOption`1.ToString*"></a>
+
+  <h3 id="UniOption_ValueOption_1_ToString" data-uid="UniOption.ValueOption`1.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
     <dd></dd>
   </dl>
 
@@ -852,10 +932,11 @@
 
   <h3 id="UniOption_ValueOption_1_Where_Func__0_System_Boolean__" data-uid="UniOption.ValueOption`1.Where(Func{`0,System.Boolean})">
   Where(Func&lt;T, bool&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L82"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Filters the value of this ValueOption based on the given predicate.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -865,13 +946,15 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>predicate</code> <span class="xref">Func</span>&lt;T, <span class="xref">bool</span>&gt;</dt>
-    <dd></dd>
+    <dd><p>The predicate to filter the value.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="UniOption.ValueOption-1.html">ValueOption</a>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>This ValueOption if it has a None value or the value satisfies the predicate; otherwise, a ValueOption with a None value.</p>
+</dd>
   </dl>
 
 
@@ -888,10 +971,11 @@
 
   <h3 id="UniOption_ValueOption_1_WhereNot_Func__0_System_Boolean__" data-uid="UniOption.ValueOption`1.WhereNot(Func{`0,System.Boolean})">
   WhereNot(Func&lt;T, bool&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L89"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Filters the value of this ValueOption based on the given predicate.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -901,13 +985,15 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>predicate</code> <span class="xref">Func</span>&lt;T, <span class="xref">bool</span>&gt;</dt>
-    <dd></dd>
+    <dd><p>The predicate to filter the value.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="UniOption.ValueOption-1.html">ValueOption</a>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>This ValueOption if it has a None value or the value does not satisfy the predicate; otherwise, a ValueOption with a None value.</p>
+</dd>
   </dl>
 
 
@@ -924,10 +1010,11 @@
 
   <h3 id="UniOption_ValueOption_1_Zip__1_UniOption_Option___0__" data-uid="UniOption.ValueOption`1.Zip``1(UniOption.Option{``0})">
   Zip&lt;T2&gt;(Option&lt;T2&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L128"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Combines the value of this ValueOption with the value of the specified Option into a ValueOption.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -937,19 +1024,22 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>other</code> <a class="xref" href="UniOption.Option-1.html">Option</a>&lt;T2&gt;</dt>
-    <dd></dd>
+    <dd><p>The other Option to zip.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="UniOption.ValueOption-1.html">ValueOption</a>&lt;(T, T2)&gt;</dt>
-    <dd></dd>
+    <dd><p>A ValueOption with a tuple of the values if both ValueOptions have Some values; otherwise, a ValueOption with a None value.</p>
+</dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T2</code></dt>
-    <dd></dd>
+    <dd><p>The type of the value in the other Option.</p>
+</dd>
   </dl>
 
 
@@ -965,10 +1055,11 @@
 
   <h3 id="UniOption_ValueOption_1_Zip__1___0_" data-uid="UniOption.ValueOption`1.Zip``1(``0)">
   Zip&lt;T2&gt;(T2)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L119"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Combines the value of this ValueOption with the specified value into a ValueOption.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -978,19 +1069,22 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>other</code> <span class="xref">T2</span></dt>
-    <dd></dd>
+    <dd><p>The specified value to zip.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="UniOption.ValueOption-1.html">ValueOption</a>&lt;(T, T2)&gt;</dt>
-    <dd></dd>
+    <dd><p>A ValueOption with a tuple of the values if this ValueOption has a Some value; otherwise, a ValueOption with a None value.</p>
+</dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T2</code></dt>
-    <dd></dd>
+    <dd><p>The type of the specified value.</p>
+</dd>
   </dl>
 
 
@@ -1010,7 +1104,7 @@
 
   <h3 id="UniOption_ValueOption_1_op_Equality_UniOption_ValueOption__0__UniOption_ValueOption__0__" data-uid="UniOption.ValueOption`1.op_Equality(UniOption.ValueOption{`0},UniOption.ValueOption{`0})">
   operator ==(ValueOption&lt;T&gt;, ValueOption&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L185"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1048,7 +1142,7 @@
 
   <h3 id="UniOption_ValueOption_1_op_Implicit__0__UniOption_ValueOption__0_" data-uid="UniOption.ValueOption`1.op_Implicit(`0)~UniOption.ValueOption{`0}">
   implicit operator ValueOption&lt;T&gt;(T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L175"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1084,7 +1178,7 @@
 
   <h3 id="UniOption_ValueOption_1_op_Inequality_UniOption_ValueOption__0__UniOption_ValueOption__0__" data-uid="UniOption.ValueOption`1.op_Inequality(UniOption.ValueOption{`0},UniOption.ValueOption{`0})">
   operator !=(ValueOption&lt;T&gt;, ValueOption&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L186"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

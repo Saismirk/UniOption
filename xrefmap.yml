@@ -954,6 +954,23 @@ references:
   fullName.vb: UniOption.ValueOption(Of T).ToEnumerable
   nameWithType: ValueOption<T>.ToEnumerable
   nameWithType.vb: ValueOption(Of T).ToEnumerable
+- uid: UniOption.ValueOption`1.ToString
+  name: ToString()
+  href: api/UniOption.ValueOption-1.html#UniOption_ValueOption_1_ToString
+  commentId: M:UniOption.ValueOption`1.ToString
+  fullName: UniOption.ValueOption<T>.ToString()
+  fullName.vb: UniOption.ValueOption(Of T).ToString()
+  nameWithType: ValueOption<T>.ToString()
+  nameWithType.vb: ValueOption(Of T).ToString()
+- uid: UniOption.ValueOption`1.ToString*
+  name: ToString
+  href: api/UniOption.ValueOption-1.html#UniOption_ValueOption_1_ToString_
+  commentId: Overload:UniOption.ValueOption`1.ToString
+  isSpec: "True"
+  fullName: UniOption.ValueOption<T>.ToString
+  fullName.vb: UniOption.ValueOption(Of T).ToString
+  nameWithType: ValueOption<T>.ToString
+  nameWithType.vb: ValueOption(Of T).ToString
 - uid: UniOption.ValueOption`1.Where(Func{`0,System.Boolean})
   name: Where(Func<T, bool>)
   href: api/UniOption.ValueOption-1.html#UniOption_ValueOption_1_Where_Func__0_System_Boolean__

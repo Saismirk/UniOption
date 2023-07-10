@@ -125,10 +125,11 @@
 
   <h3 id="UniOption_OptionExtensions_Flatten__1_UniOption_Option_UniOption_Option___0___" data-uid="UniOption.OptionExtensions.Flatten``1(UniOption.Option{UniOption.Option{``0}})">
   Flatten&lt;T&gt;(Option&lt;Option&lt;T&gt;&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/OptionExtensions.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/OptionExtensions.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Flattens an nested Option of Option into a single Option.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -138,19 +139,22 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>option</code> <a class="xref" href="UniOption.Option-1.html">Option</a>&lt;<a class="xref" href="UniOption.Option-1.html">Option</a>&lt;T&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>The Option of Option to flatten.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="UniOption.Option-1.html">Option</a>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>An Option that is the flattened result of the Option of Option.</p>
+</dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd></dd>
+    <dd><p>The type of the content.</p>
+</dd>
   </dl>
 
 
@@ -166,10 +170,11 @@
 
   <h3 id="UniOption_OptionExtensions_Flatten__1_UniOption_ValueOption_UniOption_ValueOption___0___" data-uid="UniOption.OptionExtensions.Flatten``1(UniOption.ValueOption{UniOption.ValueOption{``0}})">
   Flatten&lt;T&gt;(ValueOption&lt;ValueOption&lt;T&gt;&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/OptionExtensions.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/OptionExtensions.cs/#L44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Flattens a nested ValueOption of ValueOption into a single ValueOption.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -179,19 +184,22 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>option</code> <a class="xref" href="UniOption.ValueOption-1.html">ValueOption</a>&lt;<a class="xref" href="UniOption.ValueOption-1.html">ValueOption</a>&lt;T&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>The ValueOption of ValueOption to flatten.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="UniOption.ValueOption-1.html">ValueOption</a>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>A ValueOption that is the flattened result of the ValueOption of ValueOption.</p>
+</dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd></dd>
+    <dd><p>The type of the content.</p>
+</dd>
   </dl>
 
 
@@ -207,10 +215,11 @@
 
   <h3 id="UniOption_OptionExtensions_ToOption__1___0_" data-uid="UniOption.OptionExtensions.ToOption``1(``0)">
   ToOption&lt;T&gt;(T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/OptionExtensions.cs/#L4"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/OptionExtensions.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts the specified reference type content to an Option.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -220,19 +229,22 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>content</code> <span class="xref">T</span></dt>
-    <dd></dd>
+    <dd><p>The content to convert.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="UniOption.Option-1.html">Option</a>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>An Option with the specified content.</p>
+</dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd></dd>
+    <dd><p>The type of the content.</p>
+</dd>
   </dl>
 
 
@@ -248,10 +260,11 @@
 
   <h3 id="UniOption_OptionExtensions_ToValueOption__1_System_Nullable___0__" data-uid="UniOption.OptionExtensions.ToValueOption``1(System.Nullable{``0})">
   ToValueOption&lt;T&gt;(T?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/OptionExtensions.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/OptionExtensions.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts the nullable value type content to a ValueOption.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -261,19 +274,22 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>content</code> T?</dt>
-    <dd></dd>
+    <dd><p>The nullable content to convert.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="UniOption.ValueOption-1.html">ValueOption</a>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>A ValueOption with the specified content if it has a value; otherwise, a ValueOption with a None value.</p>
+</dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd></dd>
+    <dd><p>The type of the content.</p>
+</dd>
   </dl>
 
 
@@ -289,10 +305,11 @@
 
   <h3 id="UniOption_OptionExtensions_ToValueOption__1___0_" data-uid="UniOption.OptionExtensions.ToValueOption``1(``0)">
   ToValueOption&lt;T&gt;(T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/OptionExtensions.cs/#L5"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/OptionExtensions.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts the specified value type content to a ValueOption.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -302,19 +319,22 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>content</code> <span class="xref">T</span></dt>
-    <dd></dd>
+    <dd><p>The content to convert.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="UniOption.ValueOption-1.html">ValueOption</a>&lt;T&gt;</dt>
-    <dd></dd>
+    <dd><p>A ValueOption with the specified content.</p>
+</dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd></dd>
+    <dd><p>The type of the content.</p>
+</dd>
   </dl>
 
 
