@@ -13,12 +13,108 @@
       "is_incremental": false
     },
     {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UniOption.Editor.OptionDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UniOption.Editor.OptionDrawer.html",
+          "hash": "Fhn+M0KqaZB6RjLMHBf+COXdM+LbJSd4wMh4vPDPNLs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UniOption.Editor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UniOption.Editor.html",
+          "hash": "D+sYvq3DDhljYpJs1PIy9ko4OAts8FjZ5y48lW6OGr0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UniOption.IOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UniOption.IOption.html",
+          "hash": "K96sJOyLhiOn9/jX0fxRM6zBeFFwqEqKMW+RiofoSss="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UniOption.Option-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UniOption.Option-1.html",
+          "hash": "LNgntZBSEzlQ76TpFZa0alSq+TxyqoFOfe/oqJpbI7Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UniOption.OptionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UniOption.OptionExtensions.html",
+          "hash": "jUgx9TgnI+gg1fTsh74bDq+RKWlwL4DvKRbE4GZOJtg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UniOption.ValueOption-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UniOption.ValueOption-1.html",
+          "hash": "Vm870IrLDMyj/bqzdsWv/cs/QdQSETeoHKEB8DzCqUk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UniOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UniOption.html",
+          "hash": "AT3BweTmRvtFdhQDLZCObfz7ENktL5JNBNV2nA7sWaE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "api/index.md",
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "ydNL8cV6ouKf2wtkfcKcYRzfnIqOzKry3qgb4ax3i8E="
+          "hash": "/lrNASuqMxGYMiJquwU4zLwTHfTtoBHqw1h8FGRZ21Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "aBy+vb+lv5x6kM0KRqe+kU5c44qgcPLiAu8HLlSKHp4="
         }
       },
       "is_incremental": false,
@@ -42,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "I3SooQ31+g1sEf/maVntqd8poNqUD9VKKlJG9pPUVgE="
+          "hash": "8F/NUfQ1qtVeielkMolY9ns1Kf8T7TpN6m31YhbwnQg="
         }
       },
       "is_incremental": false,
@@ -64,6 +160,12 @@
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 2,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 7,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
