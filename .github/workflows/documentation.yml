@@ -1,28 +1,39 @@
-name: build-docs
+name: Create documentation
 
 on:
   push:
     branches:
       - main
-      - main/docs
 
 jobs:
-  run-docfx:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
+  # Build the documentation
+  build:
+    runs-on: windows-latest # Required by DocFX
     steps:
-      - uses: actions/checkout@v3
-      - uses: Kirbyrawr/docfx-action@master
-        name: Docfx metadata
+      - name: Checkout
+        uses: actions/checkout@v2
+        # with:
+        #   submodules: true
+
+      - name: Install DocFX
+        run: choco install -y docfx
+
+      - name: Use README.md as index.md
+        run: cp README.md src/UniOption/Documentation/index.md
+
+      - name: Build
+        run: docfx docs/docfx.json
+
+      # Upload the generated documentation
+      - name: Upload site artifact
+        uses: actions/upload-artifact@v1
         with:
-          args: metadata docs/docfx.json
-      - uses: Kirbyrawr/docfx-action@master
-        name: Docfx build
-        with:
-          args: build docs/docfx.json
-          
+          name: _site
+          path: docs/_site # Must equals the 'build.dest' value on your docfx.json
+
+  # Deploy the generated documentation to the gh-pages branch
   deploy:
-    needs: run-docfx
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
