@@ -80,8 +80,8 @@ var stringOption = nullString.ToOption()
 ### Match
 ```csharp
 var option = "Hello World".ToOption();
-        var result = option.Match(some: s => s.ToUpper(),
-                                  none: () => "Default");
+var result = option.Match(some: s => s.ToUpper(),
+                          none: () => "Default");
 ```
 
 ### ToEnumerable
@@ -93,9 +93,8 @@ var stringOption = "TestString".ToOption();
 ```
 
 ### Zip
+Returns a ``ValueOption<(T1,T2)>`` containing the result of the input function if both options are ``Some``, or ``None`` if either option is ``None``.
 ```csharp
-var stringOption = "TestString".ToOption();
-var intOption = 5.ToValueOption();
-var result = stringOption.Zip(intOption, (s, i) => s + i.ToString());
-Debug.Log(result);// Prints "TestString5"
+var stringOption = "TestString".ToOption()
+                               .Zip(5);//Contains ValueTuple ("TestString", 5)
 ```
