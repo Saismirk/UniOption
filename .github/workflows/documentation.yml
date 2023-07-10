@@ -22,14 +22,14 @@ jobs:
         run: cp README.md src/UniOption/Documentation/index.md
 
       - name: Build
-        run: docfx src/UniOption/Documentation/docfx.json
+        run: docfx docs/docfx.json
 
       # Upload the generated documentation
       - name: Upload site artifact
         uses: actions/upload-artifact@v1
         with:
           name: _site
-          path: src/UniOption/Documentation/_site # Must equals the 'build.dest' value on your docfx.json
+          path: docs/_site # Must equals the 'build.dest' value on your docfx.json
 
   # Deploy the generated documentation to the gh-pages branch
   deploy:
@@ -46,11 +46,11 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: _site
-          path: src/UniOption/Documentation/_site
+          path: docs/_site
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: src/UniOption/Documentation/_site
+          publish_dir: docs/_site
