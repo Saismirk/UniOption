@@ -30,6 +30,9 @@ namespace UniOption {
         public ValueOption<(T, T2)> Zip<T2>(T2 other) where T2 : struct =>
             IsSome ? ValueOption<(T, T2)>.Some((_content!.Value, other)) : ValueOption<(T, T2)>.None;
 
+        public ValueOption<(T, T2)> Zip<T2>(Option<T2> other) where T2 : class =>
+            IsSome && other.IsSome ? ValueOption<(T, T2)>.Some((_content!.Value, other.Reduce()!)) : ValueOption<(T, T2)>.None;
+
         public ValueOption<T> Do(Action<T> ifSome) {
             if (_content.HasValue) ifSome(_content.Value);
             return this;

@@ -91,3 +91,11 @@ var stringOption = "TestString".ToOption();
             Debug.Log(s);// Prints "TestString"
         }
 ```
+
+### Zip
+```csharp
+var stringOption = "TestString".ToOption();
+var intOption = 5.ToValueOption();
+var result = stringOption.Zip(intOption, (s, i) => s + i.ToString());
+Debug.Log(result);// Prints "TestString5"
+```
