@@ -15,13 +15,12 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '6.0.x'
+          dotnet-version: '7.0'
 
       - name: Install DocFx
         run: |
           dotnet tool install --global docfx
-          echo "$(dotnet tool list -g --format json | jq -r .tools[0].commands[0].prefix)../.store/docfx/" >> $GITHUB_PATH    
-
+          
       - name: Generate Docs
         run: |
           docfx docs/docfx.json
