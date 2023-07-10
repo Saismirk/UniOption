@@ -3,5 +3,5 @@ apiRules:
       uidRegex: ^UniOption
       type: Namespace
   - exclude:
-      uidRegex: .*
+      uidRegex: ^(Cysharp.Threading.Tasks.UniTask|UnityEngine)
       type: Namespace
