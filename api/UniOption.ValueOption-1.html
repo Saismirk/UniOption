@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Struct ValueOption&lt;T&gt;
    | UniOption Documentation ">
-    <meta name="generator" content="docfx 2.59.4.0">
+    <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -85,12 +85,28 @@
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <div class="implements">
+  <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="UniOption.IOption.html">IOption</a></div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="UniOption.ValueOption-1.html">ValueOption</a>&lt;T&gt;&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.ValueType.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="UniOption.html">UniOption</a></h6>
-  <h6><strong>Assembly</strong>: UniOption.dll</h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="UniOption_ValueOption_1_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly struct ValueOption&lt;T&gt; : IOption, IEquatable&lt;ValueOption&lt;T&gt;&gt; where T : struct</code></pre>
@@ -112,13 +128,6 @@
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1_IsNone.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601.IsNone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L14">View Source</a>
-  </span>
   <a id="UniOption_ValueOption_1_IsNone_" data-uid="UniOption.ValueOption`1.IsNone*"></a>
   <h4 id="UniOption_ValueOption_1_IsNone" data-uid="UniOption.ValueOption`1.IsNone">IsNone</h4>
   <div class="markdown level1 summary"></div>
@@ -142,13 +151,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1_IsSome.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601.IsSome%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L13">View Source</a>
-  </span>
   <a id="UniOption_ValueOption_1_IsSome_" data-uid="UniOption.ValueOption`1.IsSome*"></a>
   <h4 id="UniOption_ValueOption_1_IsSome" data-uid="UniOption.ValueOption`1.IsSome">IsSome</h4>
   <div class="markdown level1 summary"></div>
@@ -172,13 +174,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1_None.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601.None%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L11">View Source</a>
-  </span>
   <a id="UniOption_ValueOption_1_None_" data-uid="UniOption.ValueOption`1.None*"></a>
   <h4 id="UniOption_ValueOption_1_None" data-uid="UniOption.ValueOption`1.None">None</h4>
   <div class="markdown level1 summary"></div>
@@ -204,13 +199,6 @@
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1_Do_System_Action__0__.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601.Do(System.Action%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L35">View Source</a>
-  </span>
   <a id="UniOption_ValueOption_1_Do_" data-uid="UniOption.ValueOption`1.Do*"></a>
   <h4 id="UniOption_ValueOption_1_Do_System_Action__0__" data-uid="UniOption.ValueOption`1.Do(System.Action{`0})">Do(Action&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -251,13 +239,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1_Do_System_Action__0__System_Action_.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601.Do(System.Action%7B%600%7D%2CSystem.Action)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L40">View Source</a>
-  </span>
   <a id="UniOption_ValueOption_1_Do_" data-uid="UniOption.ValueOption`1.Do*"></a>
   <h4 id="UniOption_ValueOption_1_Do_System_Action__0__System_Action_" data-uid="UniOption.ValueOption`1.Do(System.Action{`0},System.Action)">Do(Action&lt;T&gt;, Action)</h4>
   <div class="markdown level1 summary"></div>
@@ -303,13 +284,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1_DoAsync_System_Func__0_UniTask__.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601.DoAsync(System.Func%7B%600%2CUniTask%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L46">View Source</a>
-  </span>
   <a id="UniOption_ValueOption_1_DoAsync_" data-uid="UniOption.ValueOption`1.DoAsync*"></a>
   <h4 id="UniOption_ValueOption_1_DoAsync_System_Func__0_UniTask__" data-uid="UniOption.ValueOption`1.DoAsync(System.Func{`0,UniTask})">DoAsync(Func&lt;T, UniTask&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -350,13 +324,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1_DoAsync_System_Func__0_UniTask__System_Func_UniTask__.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601.DoAsync(System.Func%7B%600%2CUniTask%7D%2CSystem.Func%7BUniTask%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L51">View Source</a>
-  </span>
   <a id="UniOption_ValueOption_1_DoAsync_" data-uid="UniOption.ValueOption`1.DoAsync*"></a>
   <h4 id="UniOption_ValueOption_1_DoAsync_System_Func__0_UniTask__System_Func_UniTask__" data-uid="UniOption.ValueOption`1.DoAsync(System.Func{`0,UniTask},System.Func{UniTask})">DoAsync(Func&lt;T, UniTask&gt;, Func&lt;UniTask&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -402,13 +369,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1_Equals_System_Object_.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L60">View Source</a>
-  </span>
   <a id="UniOption_ValueOption_1_Equals_" data-uid="UniOption.ValueOption`1.Equals*"></a>
   <h4 id="UniOption_ValueOption_1_Equals_System_Object_" data-uid="UniOption.ValueOption`1.Equals(System.Object)">Equals(Object)</h4>
   <div class="markdown level1 summary"></div>
@@ -451,13 +411,6 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.ValueType.Equals(System.Object)</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1_Equals_UniOption_ValueOption__0__.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601.Equals(UniOption.ValueOption%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L62">View Source</a>
-  </span>
   <a id="UniOption_ValueOption_1_Equals_" data-uid="UniOption.ValueOption`1.Equals*"></a>
   <h4 id="UniOption_ValueOption_1_Equals_UniOption_ValueOption__0__" data-uid="UniOption.ValueOption`1.Equals(UniOption.ValueOption{`0})">Equals(ValueOption&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -498,13 +451,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1_GetHashCode.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L59">View Source</a>
-  </span>
   <a id="UniOption_ValueOption_1_GetHashCode_" data-uid="UniOption.ValueOption`1.GetHashCode*"></a>
   <h4 id="UniOption_ValueOption_1_GetHashCode" data-uid="UniOption.ValueOption`1.GetHashCode">GetHashCode()</h4>
   <div class="markdown level1 summary"></div>
@@ -530,13 +476,6 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.ValueType.GetHashCode()</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1_IsSomeAnd_System_Func__0_System_Boolean__.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601.IsSomeAnd(System.Func%7B%600%2CSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L19">View Source</a>
-  </span>
   <a id="UniOption_ValueOption_1_IsSomeAnd_" data-uid="UniOption.ValueOption`1.IsSomeAnd*"></a>
   <h4 id="UniOption_ValueOption_1_IsSomeAnd_System_Func__0_System_Boolean__" data-uid="UniOption.ValueOption`1.IsSomeAnd(System.Func{`0,System.Boolean})">IsSomeAnd(Func&lt;T, Boolean&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -577,13 +516,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1_Map__1_System_Func__0___0__.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601.Map%60%601(System.Func%7B%600%2C%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L16">View Source</a>
-  </span>
   <a id="UniOption_ValueOption_1_Map_" data-uid="UniOption.ValueOption`1.Map*"></a>
   <h4 id="UniOption_ValueOption_1_Map__1_System_Func__0___0__" data-uid="UniOption.ValueOption`1.Map``1(System.Func{`0,``0})">Map&lt;TResult&gt;(Func&lt;T, TResult&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -640,13 +572,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1_MapObject__1_System_Func__0___0__.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601.MapObject%60%601(System.Func%7B%600%2C%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L17">View Source</a>
-  </span>
   <a id="UniOption_ValueOption_1_MapObject_" data-uid="UniOption.ValueOption`1.MapObject*"></a>
   <h4 id="UniOption_ValueOption_1_MapObject__1_System_Func__0___0__" data-uid="UniOption.ValueOption`1.MapObject``1(System.Func{`0,``0})">MapObject&lt;TResult&gt;(Func&lt;T, TResult&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -703,13 +628,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1_Match__1_System_Func__0___0__System_Func___0__.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601.Match%60%601(System.Func%7B%600%2C%60%600%7D%2CSystem.Func%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L26">View Source</a>
-  </span>
   <a id="UniOption_ValueOption_1_Match_" data-uid="UniOption.ValueOption`1.Match*"></a>
   <h4 id="UniOption_ValueOption_1_Match__1_System_Func__0___0__System_Func___0__" data-uid="UniOption.ValueOption`1.Match``1(System.Func{`0,``0},System.Func{``0})">Match&lt;TResult&gt;(Func&lt;T, TResult&gt;, Func&lt;TResult&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -770,13 +688,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1_Or__0_.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601.Or(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L25">View Source</a>
-  </span>
   <a id="UniOption_ValueOption_1_Or_" data-uid="UniOption.ValueOption`1.Or*"></a>
   <h4 id="UniOption_ValueOption_1_Or__0_" data-uid="UniOption.ValueOption`1.Or(`0)">Or(T)</h4>
   <div class="markdown level1 summary"></div>
@@ -817,13 +728,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1_Reduce.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601.Reduce%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L20">View Source</a>
-  </span>
   <a id="UniOption_ValueOption_1_Reduce_" data-uid="UniOption.ValueOption`1.Reduce*"></a>
   <h4 id="UniOption_ValueOption_1_Reduce" data-uid="UniOption.ValueOption`1.Reduce">Reduce()</h4>
   <div class="markdown level1 summary"></div>
@@ -847,13 +751,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1_Reduce__0_.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601.Reduce(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L21">View Source</a>
-  </span>
   <a id="UniOption_ValueOption_1_Reduce_" data-uid="UniOption.ValueOption`1.Reduce*"></a>
   <h4 id="UniOption_ValueOption_1_Reduce__0_" data-uid="UniOption.ValueOption`1.Reduce(`0)">Reduce(T)</h4>
   <div class="markdown level1 summary"></div>
@@ -894,13 +791,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1_Reduce_System_Func__0__.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601.Reduce(System.Func%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L22">View Source</a>
-  </span>
   <a id="UniOption_ValueOption_1_Reduce_" data-uid="UniOption.ValueOption`1.Reduce*"></a>
   <h4 id="UniOption_ValueOption_1_Reduce_System_Func__0__" data-uid="UniOption.ValueOption`1.Reduce(System.Func{`0})">Reduce(Func&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -941,13 +831,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1_Some__0_.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601.Some(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L10">View Source</a>
-  </span>
   <a id="UniOption_ValueOption_1_Some_" data-uid="UniOption.ValueOption`1.Some*"></a>
   <h4 id="UniOption_ValueOption_1_Some__0_" data-uid="UniOption.ValueOption`1.Some(`0)">Some(T)</h4>
   <div class="markdown level1 summary"></div>
@@ -988,13 +871,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1_ToEnumerable.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601.ToEnumerable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L27">View Source</a>
-  </span>
   <a id="UniOption_ValueOption_1_ToEnumerable_" data-uid="UniOption.ValueOption`1.ToEnumerable*"></a>
   <h4 id="UniOption_ValueOption_1_ToEnumerable" data-uid="UniOption.ValueOption`1.ToEnumerable">ToEnumerable()</h4>
   <div class="markdown level1 summary"></div>
@@ -1018,13 +894,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1_Where_System_Func__0_System_Boolean__.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601.Where(System.Func%7B%600%2CSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L23">View Source</a>
-  </span>
   <a id="UniOption_ValueOption_1_Where_" data-uid="UniOption.ValueOption`1.Where*"></a>
   <h4 id="UniOption_ValueOption_1_Where_System_Func__0_System_Boolean__" data-uid="UniOption.ValueOption`1.Where(System.Func{`0,System.Boolean})">Where(Func&lt;T, Boolean&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -1065,13 +934,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1_WhereNot_System_Func__0_System_Boolean__.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601.WhereNot(System.Func%7B%600%2CSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L24">View Source</a>
-  </span>
   <a id="UniOption_ValueOption_1_WhereNot_" data-uid="UniOption.ValueOption`1.WhereNot*"></a>
   <h4 id="UniOption_ValueOption_1_WhereNot_System_Func__0_System_Boolean__" data-uid="UniOption.ValueOption`1.WhereNot(System.Func{`0,System.Boolean})">WhereNot(Func&lt;T, Boolean&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -1112,13 +974,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1_Zip__1___0_.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601.Zip%60%601(%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L29">View Source</a>
-  </span>
   <a id="UniOption_ValueOption_1_Zip_" data-uid="UniOption.ValueOption`1.Zip*"></a>
   <h4 id="UniOption_ValueOption_1_Zip__1___0_" data-uid="UniOption.ValueOption`1.Zip``1(``0)">Zip&lt;T2&gt;(T2)</h4>
   <div class="markdown level1 summary"></div>
@@ -1175,13 +1030,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1_Zip__1_UniOption_Option___0__.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601.Zip%60%601(UniOption.Option%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L32">View Source</a>
-  </span>
   <a id="UniOption_ValueOption_1_Zip_" data-uid="UniOption.ValueOption`1.Zip*"></a>
   <h4 id="UniOption_ValueOption_1_Zip__1_UniOption_Option___0__" data-uid="UniOption.ValueOption`1.Zip``1(UniOption.Option{``0})">Zip&lt;T2&gt;(Option&lt;T2&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -1240,13 +1088,6 @@
   </table>
   <h3 id="operators">Operators
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1_op_Equality_UniOption_ValueOption__0__UniOption_ValueOption__0__.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601.op_Equality(UniOption.ValueOption%7B%600%7D%2CUniOption.ValueOption%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L66">View Source</a>
-  </span>
   <a id="UniOption_ValueOption_1_op_Equality_" data-uid="UniOption.ValueOption`1.op_Equality*"></a>
   <h4 id="UniOption_ValueOption_1_op_Equality_UniOption_ValueOption__0__UniOption_ValueOption__0__" data-uid="UniOption.ValueOption`1.op_Equality(UniOption.ValueOption{`0},UniOption.ValueOption{`0})">Equality(ValueOption&lt;T&gt;, ValueOption&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -1292,13 +1133,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1_op_Implicit__0__UniOption_ValueOption__0_.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601.op_Implicit(%600)~UniOption.ValueOption%7B%600%7D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L57">View Source</a>
-  </span>
   <a id="UniOption_ValueOption_1_op_Implicit_" data-uid="UniOption.ValueOption`1.op_Implicit*"></a>
   <h4 id="UniOption_ValueOption_1_op_Implicit__0__UniOption_ValueOption__0_" data-uid="UniOption.ValueOption`1.op_Implicit(`0)~UniOption.ValueOption{`0}">Implicit(T to ValueOption&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -1339,13 +1173,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1_op_Inequality_UniOption_ValueOption__0__UniOption_ValueOption__0__.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601.op_Inequality(UniOption.ValueOption%7B%600%7D%2CUniOption.ValueOption%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L67">View Source</a>
-  </span>
   <a id="UniOption_ValueOption_1_op_Inequality_" data-uid="UniOption.ValueOption`1.op_Inequality*"></a>
   <h4 id="UniOption_ValueOption_1_op_Inequality_UniOption_ValueOption__0__UniOption_ValueOption__0__" data-uid="UniOption.ValueOption`1.op_Inequality(UniOption.ValueOption{`0},UniOption.ValueOption{`0})">Inequality(ValueOption&lt;T&gt;, ValueOption&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -1395,25 +1222,14 @@
   <div>
       <a class="xref" href="UniOption.IOption.html">IOption</a>
   </div>
-  <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="UniOption.OptionExtensions.html#UniOption_OptionExtensions_ToValueOption__1___0_">OptionExtensions.ToValueOption&lt;T&gt;(T)</a>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
   </div>
 </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_ValueOption_1.md&amp;value=---%0Auid%3A%20UniOption.ValueOption%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L7" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                 <h5>In This Article</h5>
                 <div></div>

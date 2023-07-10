@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "D:/a/UniOption/UniOption/docs",
+  "source_base_path": "/github/workspace/docs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "api/UniOption.IOption.html",
-          "hash": "K96sJOyLhiOn9/jX0fxRM6zBeFFwqEqKMW+RiofoSss="
+          "hash": "Zx8xy7TdhRMrRq+QPvlhSNv2GeYTAOo28TL4GZeDJYA="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/UniOption.Option-1.html",
-          "hash": "LNgntZBSEzlQ76TpFZa0alSq+TxyqoFOfe/oqJpbI7Y="
+          "hash": "CNa4ere4CZbEUiGfEHN3t0qn+hIbeNlGCBUQxOepZVc="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/UniOption.OptionExtensions.html",
-          "hash": "jUgx9TgnI+gg1fTsh74bDq+RKWlwL4DvKRbE4GZOJtg="
+          "hash": "pXErSEUCno5WpCWVi9/jTj5n3ohNB/J/u0XpHQub50w="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/UniOption.ValueOption-1.html",
-          "hash": "Vm870IrLDMyj/bqzdsWv/cs/QdQSETeoHKEB8DzCqUk="
+          "hash": "gKP01o4MwQpzd4yGoxVTMX80kHgo8nzmHNjyCc2eKEY="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/UniOption.html",
-          "hash": "AT3BweTmRvtFdhQDLZCObfz7ENktL5JNBNV2nA7sWaE="
+          "hash": "E3fhRWchPMbKFoZ5h/vpjAncgzV+q63QgD5B3nFg2Ok="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "yebWDbgQtcIUTExovarJzcy4rBpRmpjrurbX/PoDAIU="
+          "hash": "JMtAoBqSw5U/Z9b584ax/NmzJlz8twbWb7E6w3ldEsk="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "2PUEgvOphZUDVHdqcUnV/1fMw4nAPVR7u2/6HMpnKrc="
+          "hash": "gEXb42SsmWk5bHM5XCbG2D7WjDeKGalChlVFAM8h+gk="
         }
       },
       "is_incremental": false,
