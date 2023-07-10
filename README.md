@@ -100,3 +100,6 @@ Returns a ``ValueOption<(T1,T2)>`` containing the result of the input function i
 var stringOption = "TestString".ToOption()
                                .Zip(5);//Contains ValueTuple ("TestString", 5)
 ```
+
+## API References
+API documentation can be found at [saismirk.github.io/UniOption](https://saismirk.github.io/UniOption/api/UniOption.html)
