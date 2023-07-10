@@ -1,0 +1,57 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../",
+          "files": ["*.csproj"]
+        }
+      ],
+      "dest": "api",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false,
+      "filter": "filterConfig.yml"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "api/**.yml",
+          "api/index.md"
+        ]
+      },
+      {
+        "files": [
+          "toc.yml",
+          "*.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          
+        ]
+      }
+    ],
+    "dest": "_site",
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": [
+      "default",
+      "Modern"
+    ],
+    "postProcessors": [],
+    "keepFileLink": false,
+    "markdownEngineName": "markdig",
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false,
+    "globalMetadata":
+    {
+      "_appTitle": "Example Unity documentation",
+      "_appFooter": "Example Unity documentation",
+      "_enableSearch": true
+    }
+  }
+}
