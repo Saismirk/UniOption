@@ -22,6 +22,12 @@ namespace UniOption {
         public bool IsSome => _content is not null;
         public bool IsNone => _content is null;
 
+        /// <summary>
+        /// Maps the content of this option to another option.
+        /// </summary>
+        /// <param name="map"></param>
+        /// <typeparam name="TResult"></typeparam>
+        /// <returns></returns>
         public Option<TResult> Map<TResult>(Func<T, TResult> map) where TResult : class => IsNone ? Option<TResult>.None : Option<TResult>.Some(map(_content!));
 
         public ValueOption<TResult> MapValue<TResult>(Func<T, TResult> map) where TResult : struct =>

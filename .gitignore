@@ -9,6 +9,7 @@
 /src/UniOption/[Bb]uilds/
 /src/UniOption/[Ll]ogs/
 /src/UniOption/[Uu]ser[Ss]ettings/
+/src/UniOption/[[Dd]ocumentation/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
