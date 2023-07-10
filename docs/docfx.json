@@ -11,7 +11,8 @@
       "filter": "filterConfig.yml",
       "globalNamespaceId": "Global",
       "disableGitFeatures": false,
-      "disableDefaultFilter": false
+      "disableDefaultFilter": false,
+      "allowCompilationErrors": true
     }
   ],
   "build": {
