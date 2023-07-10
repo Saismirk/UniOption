@@ -1,4 +1,4 @@
-name: Example documentation
+name: Create Documentation
 
 on:
   push:
@@ -19,7 +19,7 @@ jobs:
         run: choco install -y docfx
 
       - name: Use README.md as index.md
-        run: cp README.md Documentation/index.md
+        run: cp README.md src/UniOption/Documentation/index.md
 
       - name: Build
         run: docfx src/UniOption/Documentation/docfx.json
