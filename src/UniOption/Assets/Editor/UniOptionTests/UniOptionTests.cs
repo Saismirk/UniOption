@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
-using UnityEngine;
 using UnityEngine.TestTools;
 using UniOption;
+using Object = UnityEngine.Object;
 
 public class UniOptionTests {
     [SetUp]
@@ -350,6 +351,56 @@ public class UniOptionTests {
         var result = option.Match(some: s => s.ToString(),
                                   none: () => "Default");
         Assert.IsTrue(result == "5");
+    }
+
+    [Test]
+    public void OptionMatchNone() {
+        var option = Option<string>.None;
+        var result = option.Match(some: s => s.ToUpper(),
+                                  none: () => "Default");
+        Assert.IsTrue(result == "Default");
+    }
+
+    [Test]
+    public void ValueOptionMatchNone() {
+        var option = ValueOption<int>.None;
+        var result = option.Match(some: s => s.ToString(),
+                                  none: () => "Default");
+        Assert.IsTrue(result == "Default");
+    }
+
+    [Test]
+    public void OptionZip() {
+        var option1 = "Hello".ToOption();
+        var result = option1.Zip("World".ToOption());
+        Assert.IsTrue(result.IsSome);
+        Assert.IsFalse(result.IsNone);
+        Assert.AreEqual(("Hello", "World"), result.Reduce());
+    }
+
+    [Test]
+    public void OptionZipNone() {
+        var option1 = Option<string>.None;
+        var result = option1.Zip("World".ToOption());
+        Assert.IsTrue(result.IsNone);
+        Assert.IsFalse(result.IsSome);
+    }
+
+    [Test]
+    public void ValueOptionZip() {
+        var option1 = 5.ToValueOption();
+        var result = option1.Zip(10);
+        Assert.IsTrue(result.IsSome);
+        Assert.IsFalse(result.IsNone);
+        Assert.AreEqual((5, 10), result.Reduce((0,0)));
+    }
+
+    [Test]
+    public void ValueOptionZipNone() {
+        var option1 = ValueOption<int>.None;
+        var result = option1.Zip(10);
+        Assert.IsTrue(result.IsNone);
+        Assert.IsFalse(result.IsSome);
     }
 
     [UnityTest]

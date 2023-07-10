@@ -3,15 +3,24 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using Unity.VisualScripting.YamlDotNet.Core.Tokens;
+using UnityEngine;
 
 namespace UniOption {
-    public class Option<T> where T : class {
+#if UNITY_EDITOR
+    [Serializable]
+#endif
+    public sealed class Option<T> : IOption where T : class {
+    #if UNITY_EDITOR
+        [SerializeField] T? _content;
+    #else
         readonly T? _content;
-
+    #endif
         public static Option<T> Some(T? content) => new(content);
         public static Option<T> None             => new();
 
         Option(T? content = null) => _content = content;
+
         public bool IsSome => _content is not null;
         public bool IsNone => _content is null;
 
@@ -31,8 +40,8 @@ namespace UniOption {
         public TResult        Match<TResult>(Func<T, TResult> some, Func<TResult> none) => IsSome ? some(_content!) : none();
         public IEnumerable<T> ToEnumerable() => (IsSome ? new[] { _content } : Array.Empty<T>())!;
 
-        public Option<Tuple<T, T2>> ZipTuple<T2>(T2 other) where T2 : class =>
-            IsSome ? Option<Tuple<T, T2>>.Some(new Tuple<T, T2>(_content!, other)) : Option<Tuple<T, T2>>.None;
+        public ValueOption<(T, T2)> Zip<T2>(Option<T2> other) where T2 : class =>
+            IsSome && other.IsSome ? ValueOption<(T, T2)>.Some((_content!, other.Reduce()!)) : ValueOption<(T, T2)>.None;
 
         public Option<T> Do(Action<T> ifSome) {
             if (IsSome) ifSome(_content!);
@@ -65,5 +74,7 @@ namespace UniOption {
         public override bool Equals(object? obj) => this.Equals(obj as Option<T>);
 
         public bool Equals(Option<T>? obj) => obj is not null && (_content?.Equals(obj._content) ?? false);
+
+        public override string ToString() => IsSome ? _content!.ToString() : "None";
     }
 }
