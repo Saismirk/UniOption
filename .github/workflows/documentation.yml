@@ -19,7 +19,7 @@ jobs:
         run: choco install -y docfx
 
       - name: Use README.md as index.md
-        run: cp README.md src/UniOption/Documentation/index.md
+        run: cp README.md docs/index.md
 
       - name: Build
         run: docfx docs/docfx.json
