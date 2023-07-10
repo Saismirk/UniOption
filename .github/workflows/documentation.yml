@@ -1,4 +1,4 @@
-name: Create Documentation
+name: Example documentation
 
 on:
   push:
@@ -19,7 +19,7 @@ jobs:
         run: choco install -y docfx
 
       - name: Use README.md as index.md
-        run: cp README.md src/UniOption/Documentation/index.md
+        run: cp README.md Documentation/index.md
 
       - name: Build
         run: docfx src/UniOption/Documentation/docfx.json
@@ -29,7 +29,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: _site
-          path: src/UniOption/Documentation/_site # Must equals the 'build.dest' value on your docfx.json
+          path: _site # Must equals the 'build.dest' value on your docfx.json
 
   # Deploy the generated documentation to the gh-pages branch
   deploy:
