@@ -2,12 +2,12 @@ name: Generate Docs
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
-  generate-docs:
-    runs_on: windows-latest
-
+  build:
+    runs-on: windows-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
