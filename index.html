@@ -83,19 +83,21 @@ Contains types <code>Option&lt;T&gt;</code> for reference types, and <code>Value
 <h2 id="usage">Usage</h2>
 <p><code>Option&lt;T&gt;</code> provides the following methods:</p>
 <ul>
-<li><code>Some(T value)</code>: Creates a new Option of value <code>T</code>.</li>
-<li><code>Option&lt;TResult&gt; Map&lt;TResult&gt;(Func&lt;T, TResult&gt; map)</code>: Maps the value of the Option to a new value of type <code>TResult</code>.</li>
-<li><code>ValueOption&lt;TResult&gt; MapValue&lt;TResult&gt;(Func&lt;T, TResult&gt; map)</code>: Maps the value of the Option to a ValueOption of value type <code>TResult</code>.</li>
-<li><code>T Reduce(T defaultValue)</code>: Returns the value of the Option, or <code>defaultValue</code> if the Option is <code>None</code>.</li>
-<li><code>Option&lt;T&gt; Do(Action&lt;T&gt; ifSome, Action ifNone)</code>: Executes <code>ifSome</code> if the Option is <code>Some</code>, or <code>ifNone</code> if the Option is <code>None</code>.</li>
-<li><code>Option&lt;T&gt; Do(Action&lt;T&gt; ifSome)</code>: Executes <code>ifSome</code> if the Option is <code>Some</code>.</li>
-<li><code>async UniTask&lt;Option&lt;T&gt;&gt; DoAsync(Func&lt;T, UniTask&gt; ifSome)</code>: Async version of <code>Do</code> using UniTask.</li>
-<li><code>Option&lt;T&gt; Where(Func&lt;T, bool&gt; predicate)</code>: Filters the Option using the input predicate, return <code>None</code> if the predicate returns <code>false</code>.</li>
-<li><code>Option&lt;T&gt; WhereNot(Func&lt;T, bool&gt; predicate)</code>: Filters the Option using the input predicate, return <code>None</code> if the predicate returns <code>true</code>.</li>
-<li><code>Option&lt;TValue&gt; OfType&lt;TValue&gt;()</code>: Filters the Option to only contain values of type <code>TValue</code>.</li>
-<li><code>Option&lt;T&gt; Or(T value)</code>: Returns the Option if it is <code>Some</code>, or <code>Some(value)</code> if the Option is <code>None</code>.</li>
-<li><code>T Match&lt;T&gt;(Func&lt;T, T&gt; some, Func&lt;T&gt; none)</code>: Returns the result of <code>some</code> if the Option is <code>Some</code>, or the result of <code>none</code> if the Option is <code>None</code>.</li>
-<li><code>IEnumerable&lt;T&gt; ToEnumerable()</code>: Returns an enumerable containing the value of the Option, or an empty enumerable if the Option is <code>None</code>.</li>
+<li>Some</li>
+<li>None</li>
+<li>Map</li>
+<li>MapValue</li>
+<li>MapObject</li>
+<li>Reduce</li>
+<li>Do</li>
+<li>DoAsync</li>
+<li>Where</li>
+<li>WhereNot</li>
+<li>OfType</li>
+<li>Or</li>
+<li>Match</li>
+<li>ToEnumerable</li>
+<li>Zip</li>
 </ul>
 <p><code>ValueOption&lt;T&gt;</code> is the same as <code>Option&lt;T&gt;</code>, but for value types. It provides the same methods, but instead of <code>MapValue</code> it is <code>MapObject</code>.
 Any type can be implicitly converted to an <code>Option&lt;T&gt;</code> or <code>ValueOption&lt;T&gt;</code>. <code>null</code> is converted to <code>None</code>, and any other value is converted to <code>Some(value)</code>.
