@@ -1,56 +1,34 @@
-name: Create documentation
+name: Generate Docs
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
-  # Build the documentation
-  build:
-    runs-on: windows-latest # Required by DocFX
+  generate-docs:
+    runs_on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        # with:
-        #   submodules: true
 
-      - name: Install DocFX
-        run: choco install -y docfx
-
-      - name: Use README.md as index.md
-        run: cp README.md src/UniOption/Documentation/index.md
-
-      - name: Build
-        run: docfx docs/docfx.json
-
-      # Upload the generated documentation
-      - name: Upload site artifact
-        uses: actions/upload-artifact@v1
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
         with:
-          name: _site
-          path: docs/_site # Must equals the 'build.dest' value on your docfx.json
+          dotnet-version: '6.0.x'
 
-  # Deploy the generated documentation to the gh-pages branch
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        # with:
-        #   submodules: true
+      - name: Install DocFx
+        run: |
+          dotnet tool install --global docfx
+          echo "$(dotnet tool list -g --format json | jq -r .tools[0].commands[0].prefix)../.store/docfx/" >> $GITHUB_PATH    
 
-      # Download the generated documentation
-      - name: Download site artifact
-        uses: actions/download-artifact@v1
-        with:
-          name: _site
-          path: docs/_site
+      - name: Generate Docs
+        run: |
+          docfx docs/docfx.json
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/_site
           publish_branch: gh-pages
-          publish_dir: docs/_site
