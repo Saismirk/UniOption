@@ -1,7 +1,0 @@
-apiRules:
-  - include:
-      uidRegex: ^UniOption
-      type: Namespace
-  - exclude:
-      uidRegex: .*
-      type: Namespace
