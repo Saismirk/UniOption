@@ -4,16 +4,6 @@
     "title": "API Documentation | UniOption Documentation",
     "keywords": "API Documentation You will find here the documentation of the API of the project."
   },
-  "api/UniOption.Editor.html": {
-    "href": "api/UniOption.Editor.html",
-    "title": "Namespace UniOption.Editor | UniOption Documentation",
-    "keywords": "Namespace UniOption.Editor Classes OptionDrawer"
-  },
-  "api/UniOption.Editor.OptionDrawer.html": {
-    "href": "api/UniOption.Editor.OptionDrawer.html",
-    "title": "Class OptionDrawer | UniOption Documentation",
-    "keywords": "Class OptionDrawer Inheritance System.Object OptionDrawer Namespace : UniOption.Editor Assembly : Assembly-CSharp-Editor-firstpass.dll Syntax public class OptionDrawer : PropertyDrawer Methods | Improve this Doc View Source OnGUI(Rect, SerializedProperty, GUIContent) Declaration public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) Parameters Type Name Description Rect position SerializedProperty property GUIContent label Extension Methods OptionExtensions.ToOption<T>(T)"
-  },
   "api/UniOption.html": {
     "href": "api/UniOption.html",
     "title": "Namespace UniOption | UniOption Documentation",

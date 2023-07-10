@@ -7,31 +7,6 @@ references:
   commentId: N:UniOption
   fullName: UniOption
   nameWithType: UniOption
-- uid: UniOption.Editor
-  name: UniOption.Editor
-  href: api/UniOption.Editor.html
-  commentId: N:UniOption.Editor
-  fullName: UniOption.Editor
-  nameWithType: UniOption.Editor
-- uid: UniOption.Editor.OptionDrawer
-  name: OptionDrawer
-  href: api/UniOption.Editor.OptionDrawer.html
-  commentId: T:UniOption.Editor.OptionDrawer
-  fullName: UniOption.Editor.OptionDrawer
-  nameWithType: OptionDrawer
-- uid: UniOption.Editor.OptionDrawer.OnGUI(Rect,SerializedProperty,GUIContent)
-  name: OnGUI(Rect, SerializedProperty, GUIContent)
-  href: api/UniOption.Editor.OptionDrawer.html#UniOption_Editor_OptionDrawer_OnGUI_Rect_SerializedProperty_GUIContent_
-  commentId: M:UniOption.Editor.OptionDrawer.OnGUI(Rect,SerializedProperty,GUIContent)
-  fullName: UniOption.Editor.OptionDrawer.OnGUI(Rect, SerializedProperty, GUIContent)
-  nameWithType: OptionDrawer.OnGUI(Rect, SerializedProperty, GUIContent)
-- uid: UniOption.Editor.OptionDrawer.OnGUI*
-  name: OnGUI
-  href: api/UniOption.Editor.OptionDrawer.html#UniOption_Editor_OptionDrawer_OnGUI_
-  commentId: Overload:UniOption.Editor.OptionDrawer.OnGUI
-  isSpec: "True"
-  fullName: UniOption.Editor.OptionDrawer.OnGUI
-  nameWithType: OptionDrawer.OnGUI
 - uid: UniOption.IOption
   name: IOption
   href: api/UniOption.IOption.html

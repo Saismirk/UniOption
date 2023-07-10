@@ -14,30 +14,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/UniOption.Editor.OptionDrawer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/UniOption.Editor.OptionDrawer.html",
-          "hash": "Fhn+M0KqaZB6RjLMHBf+COXdM+LbJSd4wMh4vPDPNLs="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/UniOption.Editor.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/UniOption.Editor.html",
-          "hash": "D+sYvq3DDhljYpJs1PIy9ko4OAts8FjZ5y48lW6OGr0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/UniOption.IOption.yml",
       "output": {
         ".html": {
@@ -114,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "aBy+vb+lv5x6kM0KRqe+kU5c44qgcPLiAu8HLlSKHp4="
+          "hash": "rU664VSbQCYmk6WRGYJszBYtfJzD/EHqsApK0Ikopvo="
         }
       },
       "is_incremental": false,
@@ -165,7 +141,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 7,
+          "total_file_count": 5,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
