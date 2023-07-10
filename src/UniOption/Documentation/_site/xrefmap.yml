@@ -535,25 +535,6 @@ references:
   fullName.vb: UniOption.Option(Of T).Zip(Of T2)(UniOption.Option(Of T2))
   nameWithType: Option<T>.Zip<T2>(Option<T2>)
   nameWithType.vb: Option(Of T).Zip(Of T2)(Option(Of T2))
-- uid: UniOption.OptionDrawer
-  name: OptionDrawer
-  href: api/UniOption.OptionDrawer.html
-  commentId: T:UniOption.OptionDrawer
-  fullName: UniOption.OptionDrawer
-  nameWithType: OptionDrawer
-- uid: UniOption.OptionDrawer.OnGUI(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)
-  name: OnGUI(Rect, SerializedProperty, GUIContent)
-  href: api/UniOption.OptionDrawer.html#UniOption_OptionDrawer_OnGUI_UnityEngine_Rect_UnityEditor_SerializedProperty_UnityEngine_GUIContent_
-  commentId: M:UniOption.OptionDrawer.OnGUI(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)
-  fullName: UniOption.OptionDrawer.OnGUI(UnityEngine.Rect, UnityEditor.SerializedProperty, UnityEngine.GUIContent)
-  nameWithType: OptionDrawer.OnGUI(Rect, SerializedProperty, GUIContent)
-- uid: UniOption.OptionDrawer.OnGUI*
-  name: OnGUI
-  href: api/UniOption.OptionDrawer.html#UniOption_OptionDrawer_OnGUI_
-  commentId: Overload:UniOption.OptionDrawer.OnGUI
-  isSpec: "True"
-  fullName: UniOption.OptionDrawer.OnGUI
-  nameWithType: OptionDrawer.OnGUI
 - uid: UniOption.OptionExtensions
   name: OptionExtensions
   href: api/UniOption.OptionExtensions.html
@@ -626,30 +607,6 @@ references:
   fullName.vb: UniOption.OptionExtensions.ToValueOption(Of T)(T?)
   nameWithType: OptionExtensions.ToValueOption<T>(T?)
   nameWithType.vb: OptionExtensions.ToValueOption(Of T)(T?)
-- uid: UniOption.OptionsInspectorTest
-  name: OptionsInspectorTest
-  href: api/UniOption.OptionsInspectorTest.html
-  commentId: T:UniOption.OptionsInspectorTest
-  fullName: UniOption.OptionsInspectorTest
-  nameWithType: OptionsInspectorTest
-- uid: UniOption.OptionsInspectorTest.option
-  name: option
-  href: api/UniOption.OptionsInspectorTest.html#UniOption_OptionsInspectorTest_option
-  commentId: F:UniOption.OptionsInspectorTest.option
-  fullName: UniOption.OptionsInspectorTest.option
-  nameWithType: OptionsInspectorTest.option
-- uid: UniOption.OptionsInspectorTest.testInt
-  name: testInt
-  href: api/UniOption.OptionsInspectorTest.html#UniOption_OptionsInspectorTest_testInt
-  commentId: F:UniOption.OptionsInspectorTest.testInt
-  fullName: UniOption.OptionsInspectorTest.testInt
-  nameWithType: OptionsInspectorTest.testInt
-- uid: UniOption.OptionsInspectorTest.testString
-  name: testString
-  href: api/UniOption.OptionsInspectorTest.html#UniOption_OptionsInspectorTest_testString
-  commentId: F:UniOption.OptionsInspectorTest.testString
-  fullName: UniOption.OptionsInspectorTest.testString
-  nameWithType: OptionsInspectorTest.testString
 - uid: UniOption.ValueOption`1
   name: ValueOption<T>
   href: api/UniOption.ValueOption-1.html

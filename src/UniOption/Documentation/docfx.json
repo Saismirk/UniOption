@@ -40,7 +40,8 @@
     "fileMetadataFiles": [],
     "template": [
       "default",
-      "Modern"
+      "modern",
+      "templates/unity"
     ],
     "postProcessors": [],
     "keepFileLink": false,
