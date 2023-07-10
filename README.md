@@ -11,7 +11,7 @@ Contains types ``Option<T>`` for reference types, and ``ValueOption<T>`` for val
 - MapObject
 - Reduce
 - Do
-- DoAsync
+- DoAsync (UniTask)
 - Where
 - WhereNot
 - OfType
@@ -102,4 +102,4 @@ var stringOption = "TestString".ToOption()
 ```
 
 ## API References
-API documentation can be found at [saismirk.github.io/UniOption](https://saismirk.github.io/UniOption/api/UniOption.html)
+API documentation can be found [here](https://saismirk.github.io/UniOption/api/UniOption.html).
