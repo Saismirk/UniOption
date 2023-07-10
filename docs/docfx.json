@@ -4,11 +4,12 @@
       "src": [
         {
           "src": "../src",
-          "files": ["UniOption/Assets/Plugins/UniOption/Runtime/*.cs"]
+          "files": ["UniOption/UniOption.csproj"]
         }
       ],
       "dest": "api",
       "filter": "filterConfig.yml",
+      "globalNamespaceId": "Global",
       "disableGitFeatures": false,
       "disableDefaultFilter": false
     }
