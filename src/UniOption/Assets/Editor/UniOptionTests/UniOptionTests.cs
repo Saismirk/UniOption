@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
 using UnityEngine.TestTools;
@@ -370,29 +369,12 @@ public class UniOptionTests {
     }
 
     [Test]
-    public void OptionZipValue() {
-        var option1 = "Hello".ToOption();
-        var result = option1.ZipValue("World".ToOption());
-        Assert.IsTrue(result.IsSome);
-        Assert.IsFalse(result.IsNone);
-        Assert.IsTrue(result.Reduce() == ("Hello", "World"));
-    }
-
-    [Test]
-    public void OptionZipValueNone() {
-        var option1 = Option<string>.None;
-        var result = option1.ZipValue("World".ToOption());
-        Assert.IsTrue(result.IsNone);
-        Assert.IsFalse(result.IsSome);
-    }
-
-    [Test]
     public void OptionZip() {
         var option1 = "Hello".ToOption();
         var result = option1.Zip("World".ToOption());
         Assert.IsTrue(result.IsSome);
         Assert.IsFalse(result.IsNone);
-        Assert.AreEqual(new Tuple<string, string>("Hello", "World"), result.Reduce());
+        Assert.AreEqual(("Hello", "World"), result.Reduce());
     }
 
     [Test]
