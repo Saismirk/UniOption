@@ -3,14 +3,13 @@
     {
       "src": [
         {
-          "src": "../src/UniOption/",
-          "files": ["UniOption.csproj"]
+          "src": "../src",
+          "files": ["UniOption/Assets/Plugins/UniOption/Runtime/*.cs"]
         }
       ],
       "dest": "api",
       "disableGitFeatures": false,
       "disableDefaultFilter": false,
-      "filter": "filterConfig.yml"
     }
   ],
   "build": {
@@ -31,7 +30,18 @@
     "resource": [
       {
         "files": [
-          
+          "images/**"
+        ]
+      }
+    ],
+    "overwrite": [
+      {
+        "files": [
+          "apidoc/**.md"
+        ],
+        "exclude": [
+          "obj/**",
+          "_site/**"
         ]
       }
     ],
@@ -48,8 +58,10 @@
     "markdownEngineName": "markdig",
     "cleanupCacheHistory": false,
     "disableGitFeatures": false,
+    "noLangKeyword": false,
     "globalMetadata":
     {
+      "_disableContribution": true,
       "_appTitle": "UniOption Documentation",
       "_appFooter": "UniOption Documentation",
       "_enableSearch": true

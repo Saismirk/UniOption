@@ -1,4 +1,4 @@
-name: Create documentation
+name: build-docs
 
 on:
   push:
@@ -6,51 +6,21 @@ on:
       - main
 
 jobs:
-  # Build the documentation
-  build:
-    runs-on: windows-latest # Required by DocFX
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        # with:
-        #   submodules: true
-
-      - name: Install DocFX
-        run: choco install -y docfx
-
-      - name: Use README.md as index.md
-        run: cp README.md docs/index.md
-
-      - name: Build
-        run: docfx docs/docfx.json
-
-      # Upload the generated documentation
-      - name: Upload site artifact
-        uses: actions/upload-artifact@v1
-        with:
-          name: _site
-          path: docs/_site # Must equals the 'build.dest' value on your docfx.json
-
-  # Deploy the generated documentation to the gh-pages branch
-  deploy:
-    needs: build
+  run-docfx:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        # with:
-        #   submodules: true
-
-      # Download the generated documentation
-      - name: Download site artifact
-        uses: actions/download-artifact@v1
+      - uses: actions/checkout@v3
+      - uses: Kirbyrawr/docfx-action@master
+        name: Docfx metadata
         with:
-          name: _site
-          path: docs/_site
-
-      - name: Deploy
+          args: metadata docs/docfx.json
+      - uses: Kirbyrawr/docfx-action@master
+        name: Docfx build
+        with:
+          args: build docs/docfx.json
+      - name: Publish to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
           publish_dir: docs/_site
