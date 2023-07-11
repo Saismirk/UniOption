@@ -32,12 +32,12 @@ namespace UniOption {
         /// <summary>
         /// True if this Option has a Some value; otherwise, false.
         /// </summary>
-        public bool IsSome => _content is not null;
+        public bool IsSome => _content != null;
 
         /// <summary>
         /// True if this Option has a None value; otherwise, false.
         /// </summary>
-        public bool IsNone => _content is null;
+        public bool IsNone => _content == null;
 
         /// <summary>
         /// Applies a mapping function to the value of this Option and returns a new Option with the result.
