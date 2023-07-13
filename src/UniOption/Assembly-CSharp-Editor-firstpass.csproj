@@ -335,6 +335,12 @@
      <Reference Include="unityplastic">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
      </Reference>
+     <Reference Include="Microsoft.Bcl.AsyncInterfaces">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Assets\Packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\netstandard2.1\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+     </Reference>
+     <Reference Include="LanguageExt.Core">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Assets\Packages\LanguageExt.Core.4.4.3\lib\netstandard2.0\LanguageExt.Core.dll</HintPath>
+     </Reference>
      <Reference Include="nunit.framework">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
      </Reference>
@@ -767,6 +773,9 @@
      <Reference Include="Unity.Rider.Editor">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.2D.Sprite.Editor">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="UniTask.Linq">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\UniTask.Linq.dll</HintPath>
      </Reference>
@@ -775,6 +784,9 @@
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow.Editor">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="NuGetForUnity">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\NuGetForUnity.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
@@ -811,6 +823,9 @@
      </Reference>
      <Reference Include="Unity.VSCode.Editor">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Tilemap.Editor">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

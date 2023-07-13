@@ -10,6 +10,11 @@
 /src/UniOption/[Ll]ogs/
 /src/UniOption/[Uu]ser[Ss]ettings/
 /src/UniOption/[Dd]ocumentation/
+/src/UniOption/Assets/Packages*
+/src/UniOption/Assets/Scripts*
+/src/UniOption/Assets/Scenes*
+/src/UniOption/ProjectSettings
+/src/UniOption/CodeCoverage
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data

@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Plugins\UniOption\Runtime\IOption.cs" />
+     <Compile Include="Assets\Plugins\UniOption\Runtime\NullCheck.cs" />
      <Compile Include="Assets\Plugins\UniOption\Runtime\ValueOption.cs" />
      <Compile Include="Assets\Plugins\UniOption\Runtime\Option.cs" />
      <Compile Include="Assets\Plugins\UniOption\Runtime\OptionExtensions.cs" />
@@ -335,6 +336,12 @@
      </Reference>
      <Reference Include="unityplastic">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+     </Reference>
+     <Reference Include="Microsoft.Bcl.AsyncInterfaces">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Assets\Packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\netstandard2.1\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+     </Reference>
+     <Reference Include="LanguageExt.Core">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Assets\Packages\LanguageExt.Core.4.4.3\lib\netstandard2.0\LanguageExt.Core.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Android.Types">
      <HintPath>C:\Program Files\UnityEditors\2022.2.14f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>

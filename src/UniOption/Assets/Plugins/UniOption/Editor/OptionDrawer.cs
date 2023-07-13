@@ -7,6 +7,7 @@ namespace UniOption.Editor {
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
             var contentProperty = property.FindPropertyRelative("_content");
             EditorGUI.PropertyField(position, contentProperty, new GUIContent(label));
+            
         }
     }
 }
