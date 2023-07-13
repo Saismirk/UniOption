@@ -102,23 +102,23 @@ references:
   fullName.vb: UniOption.Option(Of T).DoAsync
   nameWithType: Option<T>.DoAsync
   nameWithType.vb: Option(Of T).DoAsync
-- uid: UniOption.Option`1.Equals(System.Nullable{System.Object})
-  name: Equals(object?)
-  href: api/UniOption.Option-1.html#UniOption_Option_1_Equals_System_Nullable_System_Object__
-  commentId: M:UniOption.Option`1.Equals(System.Nullable{System.Object})
-  name.vb: Equals(Object?)
-  fullName: UniOption.Option<T>.Equals(object?)
-  fullName.vb: UniOption.Option(Of T).Equals(Object?)
-  nameWithType: Option<T>.Equals(object?)
-  nameWithType.vb: Option(Of T).Equals(Object?)
+- uid: UniOption.Option`1.Equals(System.Object)
+  name: Equals(object)
+  href: api/UniOption.Option-1.html#UniOption_Option_1_Equals_System_Object_
+  commentId: M:UniOption.Option`1.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: UniOption.Option<T>.Equals(object)
+  fullName.vb: UniOption.Option(Of T).Equals(Object)
+  nameWithType: Option<T>.Equals(object)
+  nameWithType.vb: Option(Of T).Equals(Object)
 - uid: UniOption.Option`1.Equals(UniOption.Option{`0})
-  name: Equals(Option<T>?)
+  name: Equals(Option<T>)
   href: api/UniOption.Option-1.html#UniOption_Option_1_Equals_UniOption_Option__0__
   commentId: M:UniOption.Option`1.Equals(UniOption.Option{`0})
   name.vb: Equals(Option(Of T))
-  fullName: UniOption.Option<T>.Equals(UniOption.Option<T>?)
+  fullName: UniOption.Option<T>.Equals(UniOption.Option<T>)
   fullName.vb: UniOption.Option(Of T).Equals(UniOption.Option(Of T))
-  nameWithType: Option<T>.Equals(Option<T>?)
+  nameWithType: Option<T>.Equals(Option<T>)
   nameWithType.vb: Option(Of T).Equals(Option(Of T))
 - uid: UniOption.Option`1.Equals*
   name: Equals
@@ -255,16 +255,7 @@ references:
 - uid: UniOption.Option`1.None
   name: None
   href: api/UniOption.Option-1.html#UniOption_Option_1_None
-  commentId: P:UniOption.Option`1.None
-  fullName: UniOption.Option<T>.None
-  fullName.vb: UniOption.Option(Of T).None
-  nameWithType: Option<T>.None
-  nameWithType.vb: Option(Of T).None
-- uid: UniOption.Option`1.None*
-  name: None
-  href: api/UniOption.Option-1.html#UniOption_Option_1_None_
-  commentId: Overload:UniOption.Option`1.None
-  isSpec: "True"
+  commentId: F:UniOption.Option`1.None
   fullName: UniOption.Option<T>.None
   fullName.vb: UniOption.Option(Of T).None
   nameWithType: Option<T>.None
@@ -288,13 +279,13 @@ references:
   nameWithType: Option<T>.OfType<TValue>()
   nameWithType.vb: Option(Of T).OfType(Of TValue)()
 - uid: UniOption.Option`1.op_Equality(UniOption.Option{`0},UniOption.Option{`0})
-  name: operator ==(Option<T>?, Option<T>?)
+  name: operator ==(Option<T>, Option<T>)
   href: api/UniOption.Option-1.html#UniOption_Option_1_op_Equality_UniOption_Option__0__UniOption_Option__0__
   commentId: M:UniOption.Option`1.op_Equality(UniOption.Option{`0},UniOption.Option{`0})
   name.vb: =(Option(Of T), Option(Of T))
-  fullName: UniOption.Option<T>.operator ==(UniOption.Option<T>?, UniOption.Option<T>?)
+  fullName: UniOption.Option<T>.operator ==(UniOption.Option<T>, UniOption.Option<T>)
   fullName.vb: UniOption.Option(Of T).=(UniOption.Option(Of T), UniOption.Option(Of T))
-  nameWithType: Option<T>.operator ==(Option<T>?, Option<T>?)
+  nameWithType: Option<T>.operator ==(Option<T>, Option<T>)
   nameWithType.vb: Option(Of T).=(Option(Of T), Option(Of T))
 - uid: UniOption.Option`1.op_Equality*
   name: operator ==
@@ -307,13 +298,13 @@ references:
   nameWithType: Option<T>.operator ==
   nameWithType.vb: Option(Of T).=
 - uid: UniOption.Option`1.op_Implicit(`0)~UniOption.Option{`0}
-  name: implicit operator Option<T>(T?)
+  name: implicit operator Option<T>(T)
   href: api/UniOption.Option-1.html#UniOption_Option_1_op_Implicit__0__UniOption_Option__0_
   commentId: M:UniOption.Option`1.op_Implicit(`0)~UniOption.Option{`0}
   name.vb: CType(T)
-  fullName: UniOption.Option<T>.implicit operator UniOption.Option<T>(T?)
+  fullName: UniOption.Option<T>.implicit operator UniOption.Option<T>(T)
   fullName.vb: UniOption.Option(Of T).CType(T)
-  nameWithType: Option<T>.implicit operator Option<T>(T?)
+  nameWithType: Option<T>.implicit operator Option<T>(T)
   nameWithType.vb: Option(Of T).CType(T)
 - uid: UniOption.Option`1.op_Implicit*
   name: implicit operator
@@ -326,13 +317,13 @@ references:
   nameWithType: Option<T>.implicit operator
   nameWithType.vb: Option(Of T).CType
 - uid: UniOption.Option`1.op_Inequality(UniOption.Option{`0},UniOption.Option{`0})
-  name: operator !=(Option<T>?, Option<T>?)
+  name: operator !=(Option<T>, Option<T>)
   href: api/UniOption.Option-1.html#UniOption_Option_1_op_Inequality_UniOption_Option__0__UniOption_Option__0__
   commentId: M:UniOption.Option`1.op_Inequality(UniOption.Option{`0},UniOption.Option{`0})
   name.vb: <>(Option(Of T), Option(Of T))
-  fullName: UniOption.Option<T>.operator !=(UniOption.Option<T>?, UniOption.Option<T>?)
+  fullName: UniOption.Option<T>.operator !=(UniOption.Option<T>, UniOption.Option<T>)
   fullName.vb: UniOption.Option(Of T).<>(UniOption.Option(Of T), UniOption.Option(Of T))
-  nameWithType: Option<T>.operator !=(Option<T>?, Option<T>?)
+  nameWithType: Option<T>.operator !=(Option<T>, Option<T>)
   nameWithType.vb: Option(Of T).<>(Option(Of T), Option(Of T))
 - uid: UniOption.Option`1.op_Inequality*
   name: operator !=
@@ -361,14 +352,6 @@ references:
   fullName.vb: UniOption.Option(Of T).Or
   nameWithType: Option<T>.Or
   nameWithType.vb: Option(Of T).Or
-- uid: UniOption.Option`1.Reduce
-  name: Reduce()
-  href: api/UniOption.Option-1.html#UniOption_Option_1_Reduce
-  commentId: M:UniOption.Option`1.Reduce
-  fullName: UniOption.Option<T>.Reduce()
-  fullName.vb: UniOption.Option(Of T).Reduce()
-  nameWithType: Option<T>.Reduce()
-  nameWithType.vb: Option(Of T).Reduce()
 - uid: UniOption.Option`1.Reduce(`0)
   name: Reduce(T)
   href: api/UniOption.Option-1.html#UniOption_Option_1_Reduce__0_
@@ -396,13 +379,12 @@ references:
   nameWithType: Option<T>.Reduce
   nameWithType.vb: Option(Of T).Reduce
 - uid: UniOption.Option`1.Some(`0)
-  name: Some(T?)
+  name: Some(T)
   href: api/UniOption.Option-1.html#UniOption_Option_1_Some__0_
   commentId: M:UniOption.Option`1.Some(`0)
-  name.vb: Some(T)
-  fullName: UniOption.Option<T>.Some(T?)
+  fullName: UniOption.Option<T>.Some(T)
   fullName.vb: UniOption.Option(Of T).Some(T)
-  nameWithType: Option<T>.Some(T?)
+  nameWithType: Option<T>.Some(T)
   nameWithType.vb: Option(Of T).Some(T)
 - uid: UniOption.Option`1.Some*
   name: Some
@@ -523,15 +505,6 @@ references:
   isSpec: "True"
   fullName: UniOption.OptionExtensions.Flatten
   nameWithType: OptionExtensions.Flatten
-- uid: UniOption.OptionExtensions.Flatten``1(UniOption.Option{UniOption.Option{``0}})
-  name: Flatten<T>(Option<Option<T>>)
-  href: api/UniOption.OptionExtensions.html#UniOption_OptionExtensions_Flatten__1_UniOption_Option_UniOption_Option___0___
-  commentId: M:UniOption.OptionExtensions.Flatten``1(UniOption.Option{UniOption.Option{``0}})
-  name.vb: Flatten(Of T)(Option(Of Option(Of T)))
-  fullName: UniOption.OptionExtensions.Flatten<T>(UniOption.Option<UniOption.Option<T>>)
-  fullName.vb: UniOption.OptionExtensions.Flatten(Of T)(UniOption.Option(Of UniOption.Option(Of T)))
-  nameWithType: OptionExtensions.Flatten<T>(Option<Option<T>>)
-  nameWithType.vb: OptionExtensions.Flatten(Of T)(Option(Of Option(Of T)))
 - uid: UniOption.OptionExtensions.Flatten``1(UniOption.ValueOption{UniOption.ValueOption{``0}})
   name: Flatten<T>(ValueOption<ValueOption<T>>)
   href: api/UniOption.OptionExtensions.html#UniOption_OptionExtensions_Flatten__1_UniOption_ValueOption_UniOption_ValueOption___0___
@@ -798,16 +771,7 @@ references:
 - uid: UniOption.ValueOption`1.None
   name: None
   href: api/UniOption.ValueOption-1.html#UniOption_ValueOption_1_None
-  commentId: P:UniOption.ValueOption`1.None
-  fullName: UniOption.ValueOption<T>.None
-  fullName.vb: UniOption.ValueOption(Of T).None
-  nameWithType: ValueOption<T>.None
-  nameWithType.vb: ValueOption(Of T).None
-- uid: UniOption.ValueOption`1.None*
-  name: None
-  href: api/UniOption.ValueOption-1.html#UniOption_ValueOption_1_None_
-  commentId: Overload:UniOption.ValueOption`1.None
-  isSpec: "True"
+  commentId: F:UniOption.ValueOption`1.None
   fullName: UniOption.ValueOption<T>.None
   fullName.vb: UniOption.ValueOption(Of T).None
   nameWithType: ValueOption<T>.None
