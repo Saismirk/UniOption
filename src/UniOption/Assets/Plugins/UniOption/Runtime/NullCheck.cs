@@ -3,7 +3,7 @@ using System;
 
 namespace UniOption {
     internal static class NullCheck {
-        internal static bool IsNull<T>(T? nullable) where T : class     => nullable == null;
+        internal static bool IsNull<T>(T? nullable) where T : class     => nullable == null || UnityEngine.Object.ReferenceEquals(nullable, null);
         internal static bool IsNull<T>(T? nullable) where T : struct    => nullable is null;
         internal static bool IsNotNull<T>(T? nullable) where T : class  => !IsNull(nullable);
         internal static bool IsNotNull<T>(T? nullable) where T : struct => !IsNull(nullable);

@@ -55,6 +55,14 @@ namespace Editor.UniOptionTests {
         }
 
         [Test]
+        public void OptionFromNullObject() {
+            Object testObject = null;
+            var    objectOption = testObject.ToOption();
+            Assert.IsTrue(objectOption.IsNone);
+            Assert.IsFalse(objectOption.IsSome);
+        }
+
+        [Test]
         public void OptionNone() {
             var testString = "TestString";
             testString = null;
