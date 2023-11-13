@@ -310,6 +310,12 @@
      <Reference Include="Unity.VisualScripting.YamlDotNet">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Analytics.Tracker">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\PackageCache\com.unity.analytics@3.8.1\Unity.Analytics.Tracker.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Analytics.Editor">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\PackageCache\com.unity.analytics@3.8.1\Unity.Analytics.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="ReportGeneratorMerged">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\PackageCache\com.unity.testtools.codecoverage@1.2.4\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
      </Reference>
@@ -334,11 +340,17 @@
      <Reference Include="Microsoft.Bcl.AsyncInterfaces">
      <HintPath>F:\Programming\UniOption\src\UniOption\Assets\Packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\netstandard2.1\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
      </Reference>
+     <Reference Include="Newtonsoft.Json">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.TextureAssets">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
      </Reference>
      <Reference Include="unityplastic">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\PackageCache\com.unity.collab-proxy@2.0.7\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Analytics.StandardEvents">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\PackageCache\com.unity.analytics@3.8.1\AnalyticsStandardEvents\Unity.Analytics.StandardEvents.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:\Program Files\UnityEditors\2022.3.9f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -709,11 +721,11 @@
      <Reference Include="UniTask">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\UniTask.dll</HintPath>
      </Reference>
-     <Reference Include="UnityEditor.UI">
-     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-     </Reference>
      <Reference Include="UnityEngine.UI">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.UI">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

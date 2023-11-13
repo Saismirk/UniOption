@@ -308,6 +308,12 @@
      <Reference Include="Unity.VisualScripting.YamlDotNet">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Analytics.Tracker">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\PackageCache\com.unity.analytics@3.8.1\Unity.Analytics.Tracker.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Analytics.Editor">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\PackageCache\com.unity.analytics@3.8.1\Unity.Analytics.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="ReportGeneratorMerged">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\PackageCache\com.unity.testtools.codecoverage@1.2.4\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
      </Reference>
@@ -332,11 +338,17 @@
      <Reference Include="Microsoft.Bcl.AsyncInterfaces">
      <HintPath>F:\Programming\UniOption\src\UniOption\Assets\Packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\netstandard2.1\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
      </Reference>
+     <Reference Include="Newtonsoft.Json">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.TextureAssets">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
      </Reference>
      <Reference Include="unityplastic">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\PackageCache\com.unity.collab-proxy@2.0.7\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Analytics.StandardEvents">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\PackageCache\com.unity.analytics@3.8.1\AnalyticsStandardEvents\Unity.Analytics.StandardEvents.dll</HintPath>
      </Reference>
      <Reference Include="nunit.framework">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
@@ -722,14 +734,86 @@
      <Reference Include="UnityEngine.TestRunner">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Services.Analytics.Editor">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.Services.Analytics.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.Purchasing.Stores">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\UnityEngine.Purchasing.Stores.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.AI.Navigation">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Analytics.DataPrivacy">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Services.Core">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Rider.Editor">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Sprite.Editor">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="NuGetForUnity">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\NuGetForUnity.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Services.Core.Environments">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.Purchasing.SecurityCore">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.Purchasing.Codeless">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TextMeshPro">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.Purchasing">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\UnityEditor.Purchasing.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Services.Core.Analytics">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VSCode.Editor">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.Purchasing">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\UnityEngine.Purchasing.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.EditorCoroutines.Editor">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+     </Reference>
+     <Reference Include="UniTask.TextMeshPro">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\UniTask.TextMeshPro.dll</HintPath>
      </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="UniTask.TextMeshPro">
-     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\UniTask.TextMeshPro.dll</HintPath>
+     <Reference Include="UnityEngine.Purchasing.SecurityStub">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.Advertisements">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\UnityEngine.Advertisements.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline.Editor">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
@@ -743,8 +827,11 @@
      <Reference Include="UniTask.Addressables">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\UniTask.Addressables.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+     <Reference Include="UnityEditor.SpatialTracking">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.Advertisements.Editor">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
@@ -752,26 +839,29 @@
      <Reference Include="Unity.VisualScripting.Core">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
      </Reference>
-     <Reference Include="UnityEngine.UI">
-     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     <Reference Include="Unity.VisualStudio.Editor">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core.Editor">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Rider.Editor">
-     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+     <Reference Include="Analytics">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Analytics.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.2D.Sprite.Editor">
-     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+     <Reference Include="UnityEngine.SpatialTracking">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
      </Reference>
      <Reference Include="UniTask.Linq">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\UniTask.Linq.dll</HintPath>
      </Reference>
-     <Reference Include="NuGetForUnity">
-     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\NuGetForUnity.dll</HintPath>
+     <Reference Include="UnityEngine.UI">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+     <Reference Include="Purchasing.Common">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Purchasing.Common.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow.Editor">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
@@ -779,38 +869,32 @@
      <Reference Include="Unity.Timeline">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
-     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
-     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+     <Reference Include="Unity.Services.Analytics">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.Services.Analytics.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.AI.Navigation.Updater">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.State.Editor">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.TextMeshPro">
-     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.AI.Navigation.Editor">
+     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UniTask">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\UniTask.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VSCode.Editor">
-     <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Tilemap.Editor">
      <HintPath>F:\Programming\UniOption\src\UniOption\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>

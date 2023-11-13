@@ -16,15 +16,11 @@ public class RuntimeTests {
         gameObject = new GameObject();
         testMonoBehaviour = gameObject.AddComponent<TestMonoBehaviour>();
     }
-    [Test]
-    public void RuntimeTestsSimplePasses() {
-    }
 
-    // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-    // `yield return null;` to skip a frame.
     [UnityTest]
     public IEnumerator UnityObjectSerializedReferenceTest() {
         var i = 0;
+        Assert.IsFalse(testMonoBehaviour.Agent.IsSome);
         testMonoBehaviour.Agent.Do(agent => { }, () => i++);
         Assert.AreEqual(1, i);
         yield return null;
