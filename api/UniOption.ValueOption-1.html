@@ -2,11 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Struct ValueOption&lt;T&gt;
- | UniOption Documentation </title>
+      <title>Struct ValueOption&lt;T&gt; | UniOption Documentation </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Struct ValueOption&lt;T&gt;
- | UniOption Documentation ">
+      <meta name="title" content="Struct ValueOption&lt;T&gt; | UniOption Documentation ">
+      
       
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
@@ -30,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -90,8 +89,7 @@
 
 
   <h1 id="UniOption_ValueOption_1" data-uid="UniOption.ValueOption`1" class="text-break">
-    Struct ValueOption&lt;T&gt;
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L9"><i class="bi bi-code-slash"></i></a>
+Struct ValueOption&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -103,7 +101,8 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct ValueOption&lt;T&gt; : IOption, IEquatable&lt;ValueOption&lt;T&gt;&gt; where T : struct</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+public readonly struct ValueOption&lt;T&gt; : IOption, IEquatable&lt;ValueOption&lt;T&gt;&gt; where T : struct</code></pre>
   </div>
 
 
@@ -119,11 +118,24 @@
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="UniOption.IOption.html">IOption</a></div>
-      <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="UniOption.ValueOption-1.html">ValueOption</a>&lt;T&gt;&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="UniOption.ValueOption-1.html">ValueOption</a>&lt;T&gt;&gt;</div>
     </dd>
   </dl>
 
 
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+  </dd></dl>
 
   <dl class="typelist extensionMethods">
     <dt>Extension Methods</dt>
@@ -188,7 +200,8 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsNone { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Pure]
+public bool IsNone { get; }</code></pre>
   </div>
 
 
@@ -197,7 +210,7 @@
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><span class="xref">bool</span></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
   </dl>
 
@@ -220,7 +233,8 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsSome { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Pure]
+public bool IsSome { get; }</code></pre>
   </div>
 
 
@@ -229,7 +243,7 @@
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><span class="xref">bool</span></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
   </dl>
 
@@ -246,7 +260,7 @@
 
   <a id="UniOption_ValueOption_1_Do_" data-uid="UniOption.ValueOption`1.Do*"></a>
 
-  <h3 id="UniOption_ValueOption_1_Do_Action__0__" data-uid="UniOption.ValueOption`1.Do(Action{`0})">
+  <h3 id="UniOption_ValueOption_1_Do_System_Action__0__" data-uid="UniOption.ValueOption`1.Do(System.Action{`0})">
   Do(Action&lt;T&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L169"><i class="bi bi-code-slash"></i></a>
   </h3>
@@ -261,7 +275,7 @@
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>ifSome</code> <span class="xref">Action</span>&lt;T&gt;</dt>
+    <dt><code>ifSome</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</dt>
     <dd><p>The action to perform if this ValueOption has a Some value.</p>
 </dd>
   </dl>
@@ -285,7 +299,7 @@
 
   <a id="UniOption_ValueOption_1_Do_" data-uid="UniOption.ValueOption`1.Do*"></a>
 
-  <h3 id="UniOption_ValueOption_1_Do_Action__0__Action_" data-uid="UniOption.ValueOption`1.Do(Action{`0},Action)">
+  <h3 id="UniOption_ValueOption_1_Do_System_Action__0__System_Action_" data-uid="UniOption.ValueOption`1.Do(System.Action{`0},System.Action)">
   Do(Action&lt;T&gt;, Action)
   <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L181"><i class="bi bi-code-slash"></i></a>
   </h3>
@@ -300,7 +314,7 @@
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>ifSome</code> <span class="xref">Action</span>&lt;T&gt;</dt>
+    <dt><code>ifSome</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</dt>
     <dd><p>The action to perform if this ValueOption has a Some value.</p>
 </dd>
     <dt><code>ifNone</code> <span class="xref">Action</span></dt>
@@ -327,7 +341,7 @@
 
   <a id="UniOption_ValueOption_1_DoAsync_" data-uid="UniOption.ValueOption`1.DoAsync*"></a>
 
-  <h3 id="UniOption_ValueOption_1_DoAsync_Func__0_UniTask__" data-uid="UniOption.ValueOption`1.DoAsync(Func{`0,UniTask})">
+  <h3 id="UniOption_ValueOption_1_DoAsync_System_Func__0_UniTask__" data-uid="UniOption.ValueOption`1.DoAsync(System.Func{`0,UniTask})">
   DoAsync(Func&lt;T, UniTask&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L193"><i class="bi bi-code-slash"></i></a>
   </h3>
@@ -366,7 +380,7 @@
 
   <a id="UniOption_ValueOption_1_DoAsync_" data-uid="UniOption.ValueOption`1.DoAsync*"></a>
 
-  <h3 id="UniOption_ValueOption_1_DoAsync_Func__0_UniTask__Func_UniTask__" data-uid="UniOption.ValueOption`1.DoAsync(Func{`0,UniTask},Func{UniTask})">
+  <h3 id="UniOption_ValueOption_1_DoAsync_System_Func__0_UniTask__System_Func_UniTask__" data-uid="UniOption.ValueOption`1.DoAsync(System.Func{`0,UniTask},System.Func{UniTask})">
   DoAsync(Func&lt;T, UniTask&gt;, Func&lt;UniTask&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L205"><i class="bi bi-code-slash"></i></a>
   </h3>
@@ -408,7 +422,7 @@
 
   <a id="UniOption_ValueOption_1_Equals_" data-uid="UniOption.ValueOption`1.Equals*"></a>
 
-  <h3 id="UniOption_ValueOption_1_Equals_System_Nullable_System_Object__" data-uid="UniOption.ValueOption`1.Equals(System.Nullable{System.Object})">
+  <h3 id="UniOption_ValueOption_1_Equals_System_Object_" data-uid="UniOption.ValueOption`1.Equals(System.Object)">
   Equals(object?)
   <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L217"><i class="bi bi-code-slash"></i></a>
   </h3>
@@ -422,13 +436,13 @@
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>other</code> <span class="xref">object</span>?</dt>
+    <dt><code>other</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
     <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><span class="xref">bool</span></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
   </dl>
 
@@ -464,7 +478,7 @@
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><span class="xref">bool</span></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
   </dl>
 
@@ -495,7 +509,7 @@
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><span class="xref">int</span></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd></dd>
   </dl>
 
@@ -511,7 +525,7 @@
 
   <a id="UniOption_ValueOption_1_IsSomeAnd_" data-uid="UniOption.ValueOption`1.IsSomeAnd*"></a>
 
-  <h3 id="UniOption_ValueOption_1_IsSomeAnd_Func__0_System_Boolean__" data-uid="UniOption.ValueOption`1.IsSomeAnd(Func{`0,System.Boolean})">
+  <h3 id="UniOption_ValueOption_1_IsSomeAnd_System_Func__0_System_Boolean__" data-uid="UniOption.ValueOption`1.IsSomeAnd(System.Func{`0,System.Boolean})">
   IsSomeAnd(Func&lt;T, bool&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L72"><i class="bi bi-code-slash"></i></a>
   </h3>
@@ -526,14 +540,14 @@
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>predicate</code> <span class="xref">Func</span>&lt;T, <span class="xref">bool</span>&gt;</dt>
+    <dt><code>predicate</code> <span class="xref">Func</span>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
     <dd><p>The predicate to check.</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><span class="xref">bool</span></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd><p>True if this ValueOption has a Some value and satisfies the predicate; otherwise, false.</p>
 </dd>
   </dl>
@@ -550,7 +564,7 @@
 
   <a id="UniOption_ValueOption_1_MapObject_" data-uid="UniOption.ValueOption`1.MapObject*"></a>
 
-  <h3 id="UniOption_ValueOption_1_MapObject__1_Func__0___0__" data-uid="UniOption.ValueOption`1.MapObject``1(Func{`0,``0})">
+  <h3 id="UniOption_ValueOption_1_MapObject__1_System_Func__0___0__" data-uid="UniOption.ValueOption`1.MapObject``1(System.Func{`0,``0})">
   MapObject&lt;TResult&gt;(Func&lt;T, TResult&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
@@ -560,7 +574,8 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Option&lt;TResult&gt; MapObject&lt;TResult&gt;(Func&lt;T, TResult&gt; map) where TResult : class</code></pre>
+    <pre><code class="lang-csharp hljs">[Pure]
+public Option&lt;TResult&gt; MapObject&lt;TResult&gt;(Func&lt;T, TResult&gt; map) where TResult : class</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -595,7 +610,7 @@
 
   <a id="UniOption_ValueOption_1_Map_" data-uid="UniOption.ValueOption`1.Map*"></a>
 
-  <h3 id="UniOption_ValueOption_1_Map__1_Func__0___0__" data-uid="UniOption.ValueOption`1.Map``1(Func{`0,``0})">
+  <h3 id="UniOption_ValueOption_1_Map__1_System_Func__0___0__" data-uid="UniOption.ValueOption`1.Map``1(System.Func{`0,``0})">
   Map&lt;TResult&gt;(Func&lt;T, TResult&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
@@ -605,7 +620,8 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ValueOption&lt;TResult&gt; Map&lt;TResult&gt;(Func&lt;T, TResult&gt; map) where TResult : struct</code></pre>
+    <pre><code class="lang-csharp hljs">[Pure]
+public ValueOption&lt;TResult&gt; Map&lt;TResult&gt;(Func&lt;T, TResult&gt; map) where TResult : struct</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -640,7 +656,7 @@
 
   <a id="UniOption_ValueOption_1_Match_" data-uid="UniOption.ValueOption`1.Match*"></a>
 
-  <h3 id="UniOption_ValueOption_1_Match__1_Func__0___0__Func___0__" data-uid="UniOption.ValueOption`1.Match``1(Func{`0,``0},Func{``0})">
+  <h3 id="UniOption_ValueOption_1_Match__1_System_Func__0___0__System_Func___0__" data-uid="UniOption.ValueOption`1.Match``1(System.Func{`0,``0},System.Func{``0})">
   Match&lt;TResult&gt;(Func&lt;T, TResult&gt;, Func&lt;TResult&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L131"><i class="bi bi-code-slash"></i></a>
   </h3>
@@ -698,7 +714,8 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ValueOption&lt;T&gt; Or(T orOption)</code></pre>
+    <pre><code class="lang-csharp hljs">[Pure]
+public ValueOption&lt;T&gt; Or(T orOption)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -737,7 +754,8 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public T Reduce()</code></pre>
+    <pre><code class="lang-csharp hljs">[Pure]
+public T Reduce()</code></pre>
   </div>
 
 
@@ -760,7 +778,7 @@
 
   <a id="UniOption_ValueOption_1_Reduce_" data-uid="UniOption.ValueOption`1.Reduce*"></a>
 
-  <h3 id="UniOption_ValueOption_1_Reduce_Func__0__" data-uid="UniOption.ValueOption`1.Reduce(Func{`0})">
+  <h3 id="UniOption_ValueOption_1_Reduce_System_Func__0__" data-uid="UniOption.ValueOption`1.Reduce(System.Func{`0})">
   Reduce(Func&lt;T&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L97"><i class="bi bi-code-slash"></i></a>
   </h3>
@@ -809,7 +827,8 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public T Reduce(T ifNone)</code></pre>
+    <pre><code class="lang-csharp hljs">[Pure]
+public T Reduce(T ifNone)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -848,7 +867,8 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ValueOption&lt;T&gt; Some(T obj)</code></pre>
+    <pre><code class="lang-csharp hljs">[Pure]
+public static ValueOption&lt;T&gt; Some(T obj)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -887,13 +907,14 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;T&gt; ToEnumerable()</code></pre>
+    <pre><code class="lang-csharp hljs">[Pure]
+public IEnumerable&lt;T&gt; ToEnumerable()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><span class="xref">IEnumerable</span>&lt;T&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
     <dd><p>An enumerable containing the value of this ValueOption if it has a Some value; otherwise, an empty enumerable.</p>
 </dd>
   </dl>
@@ -925,7 +946,7 @@
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><span class="xref">string</span></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
 
@@ -941,7 +962,7 @@
 
   <a id="UniOption_ValueOption_1_Where_" data-uid="UniOption.ValueOption`1.Where*"></a>
 
-  <h3 id="UniOption_ValueOption_1_Where_Func__0_System_Boolean__" data-uid="UniOption.ValueOption`1.Where(Func{`0,System.Boolean})">
+  <h3 id="UniOption_ValueOption_1_Where_System_Func__0_System_Boolean__" data-uid="UniOption.ValueOption`1.Where(System.Func{`0,System.Boolean})">
   Where(Func&lt;T, bool&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
@@ -956,7 +977,7 @@
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>predicate</code> <span class="xref">Func</span>&lt;T, <span class="xref">bool</span>&gt;</dt>
+    <dt><code>predicate</code> <span class="xref">Func</span>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
     <dd><p>The predicate to filter the value.</p>
 </dd>
   </dl>
@@ -980,7 +1001,7 @@
 
   <a id="UniOption_ValueOption_1_WhereNot_" data-uid="UniOption.ValueOption`1.WhereNot*"></a>
 
-  <h3 id="UniOption_ValueOption_1_WhereNot_Func__0_System_Boolean__" data-uid="UniOption.ValueOption`1.WhereNot(Func{`0,System.Boolean})">
+  <h3 id="UniOption_ValueOption_1_WhereNot_System_Func__0_System_Boolean__" data-uid="UniOption.ValueOption`1.WhereNot(System.Func{`0,System.Boolean})">
   WhereNot(Func&lt;T, bool&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ValueOption.cs/#L112"><i class="bi bi-code-slash"></i></a>
   </h3>
@@ -995,7 +1016,7 @@
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>predicate</code> <span class="xref">Func</span>&lt;T, <span class="xref">bool</span>&gt;</dt>
+    <dt><code>predicate</code> <span class="xref">Func</span>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
     <dd><p>The predicate to filter the value.</p>
 </dd>
   </dl>
@@ -1029,7 +1050,8 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ValueOption&lt;(T, T2)&gt; Zip&lt;T2&gt;(Option&lt;T2&gt; other) where T2 : class</code></pre>
+    <pre><code class="lang-csharp hljs">[Pure]
+public ValueOption&lt;(T, T2)&gt; Zip&lt;T2&gt;(Option&lt;T2&gt; other) where T2 : class</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1074,7 +1096,8 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ValueOption&lt;(T, T2)&gt; Zip&lt;T2&gt;(T2 other) where T2 : struct</code></pre>
+    <pre><code class="lang-csharp hljs">[Pure]
+public ValueOption&lt;(T, T2)&gt; Zip&lt;T2&gt;(T2 other) where T2 : struct</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1135,7 +1158,7 @@
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><span class="xref">bool</span></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
   </dl>
 
@@ -1160,7 +1183,8 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator ValueOption&lt;T&gt;(T content)</code></pre>
+    <pre><code class="lang-csharp hljs">[Pure]
+public static implicit operator ValueOption&lt;T&gt;(T content)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1209,7 +1233,7 @@
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><span class="xref">bool</span></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
   </dl>
 
