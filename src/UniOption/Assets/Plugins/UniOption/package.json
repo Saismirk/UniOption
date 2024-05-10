@@ -9,6 +9,6 @@
   "license": "MIT",
   "category": "Plugin",
   "dependencies": {
-    "com.cysharp.unitask": "2.3.3"
+    "com.cysharp.unitask": "2.5.4"
   }
 }
