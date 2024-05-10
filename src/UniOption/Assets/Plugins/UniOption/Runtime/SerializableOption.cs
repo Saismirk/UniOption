@@ -3,24 +3,27 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
+using UnityEngine;
 using System.Diagnostics.Contracts;
 
 namespace UniOption {
-    public readonly struct Option<T> : IOption where T : class {
-        readonly T _content;
+    [Serializable]
+    public struct SerializableOption<T> : IOption where T : class {
+        [SerializeField] T _content;
+
         /// <summary>
         /// Creates a new Option with a Some value.
         /// </summary>
         /// <param name="content">The value to wrap.</param>
         /// <returns>An Option with the specified value.</returns>
-        public static Option<T> Some(T content) => new(content);
+        public static SerializableOption<T> Some(T content) => new(content);
 
         /// <summary>
         /// Gets an Option with a None value.
         /// </summary>
         public static readonly Option<T> None = new();
 
-        Option(T content = null) => _content = content;
+        SerializableOption(T content = null) => _content = content;
 
         /// <summary>
         /// True if this Option has a Some value; otherwise, false.
@@ -214,24 +217,16 @@ namespace UniOption {
             return this;
         }
 
-        [Pure]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static implicit operator Option<T>(T content) => content != null ? Some(content) : None;
-
-        [Pure]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static implicit operator Option<T>(SerializableOption<T> serializableOption) => serializableOption.ToOption();
-
-        public static bool operator ==(Option<T> a, Option<T> b) => a.Equals(b);
-        public static bool operator !=(Option<T> a, Option<T> b) => !(a == b);
+        public static bool operator ==(SerializableOption<T> a, SerializableOption<T> b) => a.Equals(b);
+        public static bool operator !=(SerializableOption<T> a, SerializableOption<T> b) => !(a == b);
 
         public override int GetHashCode() => _content?.GetHashCode() ?? 0;
     #nullable enable
-        public override bool Equals(object obj) => obj is Option<T> other && (IsSome ? _content.Equals(other._content) : other.IsNone);
+        public override bool Equals(object obj) => obj is SerializableOption<T> other && (IsSome ? _content.Equals(other._content) : other.IsNone);
     #nullable disable
         [Pure]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public override string ToString() => IsSome ? _content!.ToString() : "None";
-        public bool Equals(Option<T> other) => IsSome ? other.IsSome && _content!.Equals(other._content) : other.IsNone;
+        public bool Equals(SerializableOption<T> other) => IsSome ? other.IsSome && _content!.Equals(other._content) : other.IsNone;
     }
 }

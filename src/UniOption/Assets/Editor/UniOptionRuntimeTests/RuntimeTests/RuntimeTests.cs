@@ -20,8 +20,8 @@ public class RuntimeTests {
     [UnityTest]
     public IEnumerator UnityObjectSerializedReferenceTest() {
         var i = 0;
-        Assert.IsFalse(testMonoBehaviour.Agent.IsSome);
-        testMonoBehaviour.Agent.Do(agent => { }, () => i++);
+        Assert.IsTrue(testMonoBehaviour.Transform.IsSome);
+        testMonoBehaviour.Transform.Do(t => { }, () => i++);
         Assert.AreEqual(1, i);
         yield return null;
     }

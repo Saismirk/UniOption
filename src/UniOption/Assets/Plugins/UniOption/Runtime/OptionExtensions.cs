@@ -11,6 +11,8 @@ namespace UniOption {
         /// <param name="content">The content to convert.</param>
         /// <returns>An Option with the specified content.</returns>
         public static Option<T> ToOption<T>(this T content) where T : class => Option<T>.Some(content);
+        public static Option<T> ToOption<T>(this SerializableOption<T> serializableOption) where T : class =>
+            serializableOption.Match(Option<T>.Some, () => Option<T>.None);
 
         /// <summary>
         /// Converts the specified value type content to a ValueOption.
