@@ -2,7 +2,7 @@
   "name": "com.sai.unioption",
   "displayName": "UniOption",
   "author": { "name": "Sai" },
-  "version": "1.2.0",
+  "version": "1.2.1",
   "unity": "2021.3",
   "description": "Option Monad for Unity",
   "keywords": [ "functional", "monad", "Option", "UniOption" ],
