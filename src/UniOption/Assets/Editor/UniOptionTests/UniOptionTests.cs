@@ -1,12 +1,17 @@
 using System.Collections;
+using System.Diagnostics.CodeAnalysis;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
 using UniOption;
+using UnityEngine;
 using UnityEngine.TestTools;
 using Object = UnityEngine.Object;
+// ReSharper disable HeapView.CanAvoidClosure
 
 namespace Editor.UniOptionTests {
     public class UniOptionTests {
+        int    _validator;
+        string _validatorString;
         [SetUp]
         public void Setup() { }
 
@@ -56,17 +61,14 @@ namespace Editor.UniOptionTests {
 
         [Test]
         public void OptionFromNullObject() {
-            Object testObject = null;
-            var    objectOption = testObject.ToOption();
+            var    objectOption = ((Object)null)!.ToOption();
             Assert.IsTrue(objectOption.IsNone);
             Assert.IsFalse(objectOption.IsSome);
         }
 
         [Test]
         public void OptionNone() {
-            var testString = "TestString";
-            testString = null;
-            Option<string> stringOption = testString;
+            Option<string> stringOption = default;
             Assert.IsFalse(stringOption.IsSome, "Option<string>.IsSome is true");
             Assert.IsTrue(stringOption.IsNone, "Option<string>.IsNone is false");
             Assert.IsTrue(stringOption.Reduce(string.Empty) == string.Empty, "Option<string>.Reduce(string.Empty) != string.Empty");
@@ -91,10 +93,10 @@ namespace Editor.UniOptionTests {
         }
 
         [Test]
+        [SuppressMessage("ReSharper", "ExpressionIsAlwaysNull")]
         public void ValueOptionNone() {
-            int? nullableInt = 5;
-            nullableInt = null;
-            var intOption = nullableInt.ToValueOption();
+            int? nullableInt = null;
+            var  intOption   = nullableInt.ToValueOption();
             Assert.IsFalse(intOption.IsSome);
             Assert.IsTrue(intOption.IsNone);
             Assert.IsTrue(intOption.Reduce(0) == 0);
@@ -130,7 +132,7 @@ namespace Editor.UniOptionTests {
         [Test]
         public void ValueOptionMapObject() {
             var mappedOption = 5.ToValueOption()
-                                .MapObject(i => "5");
+                                .MapObject(i => i.ToString());
             Assert.IsTrue(mappedOption.IsSome);
             Assert.IsFalse(mappedOption.IsNone);
             Assert.IsTrue(mappedOption.Reduce(string.Empty) == "5");
@@ -157,58 +159,130 @@ namespace Editor.UniOptionTests {
         [Test]
         public void OptionDo() {
             var stringOption = "TestString".ToOption();
+            _validatorString = string.Empty;
+            stringOption.Do(s => _validatorString = s.ToUpper());
+            Assert.IsTrue(_validatorString == "TESTSTRING");
+        }
+
+        [Test]
+        public void OptionDoWithContext() {
+            var stringOption = "TestString".ToOption();
             var upperOption  = string.Empty;
-            stringOption.Do(s => upperOption = s.ToUpper());
+            stringOption.Do((string s, ref string upper) => upper = s.ToUpper(), ref upperOption);
             Assert.IsTrue(upperOption == "TESTSTRING");
+        }
+
+        [Test]
+        public void OptionDoWithContextNoRef() {
+            var stringOption = "TestString".ToOption();
+            var upperOption  = "_TEST";
+            _validatorString = string.Empty;
+            stringOption.Do((s, upper) => _validatorString = s.ToUpper() + upper, upperOption);
+            Assert.IsTrue(_validatorString == "TESTSTRING_TEST");
         }
 
         [Test]
         public void ValueOptionDo() {
             var intOption   = 5.ToValueOption();
+            var upperOption = intOption.Match(s => s.ToString(), () => string.Empty);
+            Assert.IsTrue(upperOption == "5");
+        }
+
+        [Test]
+        public void ValueOptionDoWithRef() {
+            var intOption   = 5.ToValueOption();
             var upperOption = string.Empty;
-            intOption.Do(s => upperOption = s.ToString());
+            intOption.Do((int s, ref string upper) => upper = s.ToString(), ref upperOption);
             Assert.IsTrue(upperOption == "5");
         }
 
         [Test]
         public void OptionDoNone() {
             var stringOption = Option<string>.None;
+            _validatorString = string.Empty;
+            stringOption.Do(s => _validatorString = s.ToUpper(), () => _validatorString += "FAILED");
+            Assert.IsTrue(_validatorString == "FAILED");
+        }
+
+        [Test]
+        public void OptionDoNoneWithContext() {
+            var stringOption = Option<string>.None;
             var upperOption  = string.Empty;
-            stringOption.Do(s => upperOption = s.ToUpper());
+            stringOption.Do((string s, ref string upper) => upper = s.ToUpper(), ref upperOption);
             Assert.IsTrue(upperOption == string.Empty);
+        }
+
+        [Test]
+        public void OptionDoNoneWithContextWithNoneRef() {
+            var stringOption = Option<string>.None;
+            var upperOption  = string.Empty;
+            stringOption.Do((string s, ref string upper) => upper = s.ToUpper(), ref upperOption, (ref string upper) => upper += "FAILED");
+            Assert.IsTrue(upperOption == "FAILED");
+        }
+
+        [Test]
+        public void OptionDoNoneWithContextNoRef() {
+            var stringOption = Option<string>.None;
+            var upperOption  = "_TEST";
+            _validatorString = string.Empty;
+            stringOption.Do((s, _) => _validatorString = s.ToUpper(), upperOption, upper => _validatorString += upper);
+            Assert.IsTrue(_validatorString == "_TEST");
+        }
+
+        [Test]
+        public void OptionDoNoneWithContextNoRefWithNoneAction() {
+            var stringOption = Option<string>.None;
+            var upperOption  = "_TEST";
+            _validatorString = string.Empty;
+            stringOption.Do((s, _) => _validatorString = s.ToUpper(), upperOption, () => _validatorString += "_TEST");
+            Assert.IsTrue(_validatorString == "_TEST");
         }
 
         [Test]
         public void ValueOptionDoNone() {
             var intOption   = ValueOption<int>.None;
-            var upperOption = string.Empty;
-            intOption.Do(s => upperOption = s.ToString());
+            var upperOption = intOption.Match(s => s.ToString().ToUpper(), () => string.Empty);
             Assert.IsTrue(upperOption == string.Empty);
+        }
+
+        [Test]
+        public void ValueOptionDoNoneWithContext() {
+            var intOption   = ValueOption<int>.None;
+            var upperOption = string.Empty;
+            intOption.Do((int s, ref string upper) => upper = s.ToString().ToUpper(), ref upperOption);
+            Assert.IsTrue(upperOption == string.Empty);
+        }
+
+        [Test]
+        public void ValueOptionDoNoneWithContextNoRef() {
+            var intOption   = ValueOption<int>.None;
+            var upperOption = string.Empty;
+            _validator = 0;
+            intOption.Do((_, _) => _validator++, upperOption, _ => _validator += 2);
+            Assert.IsTrue(upperOption == string.Empty);
+            Assert.IsTrue(_validator == 2);
         }
 
         [Test]
         public void OptionDoOrElse() {
             var stringOption = "TestString".ToOption();
-            var upperOption  = string.Empty;
-            stringOption.Do(s => upperOption = s.ToUpper(),
-                            () => upperOption = "None");
+            var upperOption = stringOption.Match(s => s.ToUpper(),
+                                                 () => "None");
             Assert.IsTrue(upperOption == "TESTSTRING");
             stringOption = Option<string>.None;
-            stringOption.Do(s => upperOption = s.ToUpper(),
-                            () => upperOption = "None");
+            upperOption = stringOption.Match(s => s.ToUpper(),
+                                             () => "None");
             Assert.IsTrue(upperOption == "None");
         }
 
         [Test]
         public void ValueOptionDoOrElse() {
             var intOption   = 5.ToValueOption();
-            var upperOption = string.Empty;
-            intOption.Do(s => upperOption = s.ToString(),
-                          () => upperOption = "None");
+            var upperOption = intOption.Match(s => s.ToString(), () => "None");
             Assert.IsTrue(upperOption == "5");
             intOption = ValueOption<int>.None;
-            intOption.Do(s => upperOption = s.ToString(),
-                          () => upperOption = "None");
+            upperOption = intOption.Match(s => s.ToString(),
+                                          () => "None");
             Assert.IsTrue(upperOption == "None");
         }
 
@@ -235,9 +309,8 @@ namespace Editor.UniOptionTests {
         [Test]
         public void OptionDoOrElseNone() {
             var stringOption = Option<string>.None;
-            var upperOption  = string.Empty;
-            stringOption.Do(s => upperOption = s.ToUpper(),
-                            () => upperOption = "None");
+            var upperOption = stringOption.Match(s => s.ToUpper(),
+                                                 () => "None");
             Assert.IsTrue(upperOption == "None");
         }
 
@@ -327,9 +400,8 @@ namespace Editor.UniOptionTests {
 
         [Test]
         public void ValueOptionOrNone() {
-            int? nullableInt = null;
-            var intOption = nullableInt.ToValueOption()
-                                       .Or(10);
+            var intOption = ((int?)null).ToValueOption()
+                                        .Or(10);
             Assert.AreEqual(10, intOption.Reduce(0));
         }
 
@@ -483,6 +555,7 @@ namespace Editor.UniOptionTests {
         public void OptionEqualsValueOption() {
             var option1 = "Hello".ToOption();
             var option2 = 5.ToValueOption();
+            // ReSharper disable once SuspiciousTypeConversion.Global
             Assert.IsFalse(option1.Equals(option2));
         }
 
@@ -498,51 +571,71 @@ namespace Editor.UniOptionTests {
             Assert.IsTrue(option1.ToString() == "None");
         }
 
+        string _test = "TestString";
+
         [UnityTest]
         public IEnumerator OptionDoAsync() => UniTask.ToCoroutine(async () => {
-            var upperOption = string.Empty;
+            _test = string.Empty;
             await "TestString".ToOption()
                               .DoAsync(async s => {
                                    await UniTask.Delay(100);
-                                   upperOption = s.ToUpper();
+                                   _test = s.ToUpper();
                                });
-            Assert.IsTrue(upperOption == "TESTSTRING");
+            Assert.IsTrue(_test == "TESTSTRING");
         });
 
         [UnityTest]
         public IEnumerator OptionDoAsyncIfNone() => UniTask.ToCoroutine(async () => {
-            var upperOption = string.Empty;
+            _test = string.Empty;
             await Option<string>.None
                                 .DoAsync(async s => {
                                              await UniTask.Delay(100);
-                                             upperOption = s.ToUpper();
+                                             _test = s.ToUpper();
                                          },
                                          async () => {
                                              await UniTask.Delay(100);
-                                             upperOption = "None";
+                                             _test = "None";
                                          });
-            Assert.IsTrue(upperOption == "None");
+            Assert.IsTrue(_test == "None");
             await "TestString".ToOption()
                               .DoAsync(async s => {
-                                   await UniTask.Delay(100);
-                                   upperOption = s.ToUpper();
-                               },
-                               async () => {
-                                   await UniTask.Delay(100);
-                                   upperOption = "None";
-                               });
-            Assert.IsTrue(upperOption == "TESTSTRING");
+                                           await UniTask.Delay(100);
+                                           _test = s.ToUpper();
+                                       },
+                                       async () => {
+                                           await UniTask.Delay(100);
+                                           _test = "None";
+                                       });
+            Assert.IsTrue(_test == "TESTSTRING");
         });
 
         [UnityTest]
         public IEnumerator ValueOptionDoAsync() => UniTask.ToCoroutine(async () => {
-            var upperOption = string.Empty;
+            _test = string.Empty;
             await 5.ToValueOption()
                    .DoAsync(async s => {
                         await UniTask.Delay(100);
-                        upperOption = s.ToString();
+                        _test = s.ToString();
                     });
-            Assert.IsTrue(upperOption == "5");
+            Assert.IsTrue(_test == "5");
         });
+
+        [Test]
+        public void ValueOptionFlattenTest() {
+            var option = 5.ToValueOption();
+            var nestedOption = option.ToValueOption();
+            var flattenedOption = nestedOption.Flatten();
+            Assert.That(flattenedOption.IsSome);
+        #pragma warning disable CS0183 // 'is' expression's given expression is always of the provided type
+            Assert.That(flattenedOption is ValueOption<int>);
+        #pragma warning restore CS0183 // 'is' expression's given expression is always of the provided type
+            Assert.IsTrue(flattenedOption == 5);
+        }
+
+        SerializableOption<GameObject> _gameObject;
+        [Test]
+        public void SerializableOptionToOptionNone() {
+            Assert.IsTrue(_gameObject.ToOption().IsNone);
+        }
     }
 }
