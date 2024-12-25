@@ -75,3 +75,4 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /src/UniOption/[Aa]ssets/[Ss]treamingAssets/aa.meta
 /src/UniOption/[Aa]ssets/[Ss]treamingAssets/aa/*
+/src/UniOption/.idea
