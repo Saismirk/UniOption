@@ -21,7 +21,10 @@ public class RuntimeTests {
     public IEnumerator UnityObjectSerializedReferenceTest() {
         var i = 0;
         Assert.IsTrue(testMonoBehaviour.Transform.IsSome);
-        testMonoBehaviour.Transform.Do(t => { }, () => i++);
+        testMonoBehaviour.Transform.Do((t, index) => { }, i, _ => { });
+        if (testMonoBehaviour.NavMeshAgent.IsNone) {
+            i++;
+        }
         Assert.AreEqual(1, i);
         yield return null;
     }
