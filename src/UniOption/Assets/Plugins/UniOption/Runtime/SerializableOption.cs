@@ -193,6 +193,19 @@ namespace UniOption {
         }
 
         /// <summary>
+        /// Performs the specified actions on the value of this Option based on whether it has a Some value or a None value.
+        /// </summary>
+        /// <param name="ifSome">The action to perform if this Option has a Some value.</param>
+        /// <param name="ifNone">The action to perform if this Option has a None value.</param>
+        /// <returns>This Option.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public Option<T> Do<TContext>(Action<T, TContext> ifSome, TContext context, Action<TContext> ifNone) {
+            if (IsSome) ifSome(_content!, context);
+            else ifNone(context);
+            return this;
+        }
+
+        /// <summary>
         /// Asynchronously performs the specified async action on the value of this Option if it has a Some value.
         /// </summary>
         /// <param name="ifSome">The async action to perform if this Option has a Some value.</param>
