@@ -121,6 +121,32 @@
             public TResult Match<TResult>(Func<T, TResult> some, Func<TResult> none) => IsSome ? some(_content!.Value) : none();
 
             /// <summary>
+            /// Matches the value of this Option and applies the specified functions accordingly.
+            /// </summary>
+            /// <typeparam name="TResult">The type of the result.</typeparam>
+            /// <typeparam name="TContext">The type of the context.</typeparam>
+            /// <param name="some">The function to apply if this Option has a Some value.</param>
+            /// <param name="context">The context to pass to the function.</param>
+            /// <param name="none">The function to apply if this Option has a None value.</param>
+            /// <returns>The result of applying the specified function to the value of this Option.</returns>
+            public TResult Match<TResult, TContext>(Func<T, TContext, TResult> some, TContext context, Func<TResult> none) => IsSome
+                ? some(_content!.Value, context)
+                : none();
+
+            /// <summary>
+            /// Matches the value of this Option and applies the specified functions accordingly.
+            /// </summary>
+            /// <typeparam name="TResult">The type of the result.</typeparam>
+            /// <typeparam name="TContext">The type of the context.</typeparam>
+            /// <param name="some">The function to apply if this Option has a Some value.</param>
+            /// <param name="context">The context to pass to the function.</param>
+            /// <param name="none">The function to apply if this Option has a None value.</param>
+            /// <returns>The result of applying the specified function to the value of this Option.</returns>
+            public TResult Match<TResult, TContext>(Func<T, TContext, TResult> some, TContext context, Func<TContext, TResult> none) => IsSome
+                ? some(_content!.Value, context)
+                : none(context);
+
+            /// <summary>
             /// Converts this ValueOption to an enumerable containing the value if it has a Some value; otherwise, returns an empty enumerable.
             /// </summary>
             /// <returns>An enumerable containing the value of this ValueOption if it has a Some value; otherwise, an empty enumerable.</returns>

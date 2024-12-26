@@ -124,7 +124,6 @@ namespace UniOption {
         /// <param name="orOption">The alternative option to return if this Option has a None value.</param>
         /// <returns>This Option if it has a Some value; otherwise, the specified alternative option.</returns>
         [Pure]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public Option<T> Or(T orOption) => IsNone ? orOption : this;
 
         /// <summary>
@@ -134,14 +133,38 @@ namespace UniOption {
         /// <param name="some">The function to apply if this Option has a Some value.</param>
         /// <param name="none">The function to apply if this Option has a None value.</param>
         /// <returns>The result of applying the specified function to the value of this Option.</returns>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public TResult Match<TResult>(Func<T, TResult> some, Func<TResult> none) => IsSome ? some(_content!) : none();
+
+        /// <summary>
+        /// Matches the value of this Option and applies the specified functions accordingly.
+        /// </summary>
+        /// <typeparam name="TResult">The type of the result.</typeparam>
+        /// <typeparam name="TContext">The type of the context.</typeparam>
+        /// <param name="some">The function to apply if this Option has a Some value.</param>
+        /// <param name="context">The context to pass to the function.</param>
+        /// <param name="none">The function to apply if this Option has a None value.</param>
+        /// <returns>The result of applying the specified function to the value of this Option.</returns>
+        public TResult Match<TResult, TContext>(Func<T, TContext, TResult> some, TContext context, Func<TResult> none) => IsSome
+            ? some(_content!, context)
+            : none();
+
+        /// <summary>
+        /// Matches the value of this Option and applies the specified functions accordingly.
+        /// </summary>
+        /// <typeparam name="TResult">The type of the result.</typeparam>
+        /// <typeparam name="TContext">The type of the context.</typeparam>
+        /// <param name="some">The function to apply if this Option has a Some value.</param>
+        /// <param name="context">The context to pass to the function.</param>
+        /// <param name="none">The function to apply if this Option has a None value.</param>
+        /// <returns>The result of applying the specified function to the value of this Option.</returns>
+        public TResult Match<TResult, TContext>(Func<T, TContext, TResult> some, TContext context, Func<TContext, TResult> none) => IsSome
+            ? some(_content!, context)
+            : none(context);
 
         /// <summary>
         /// Converts this Option to an enumerable containing the value if it has a Some value; otherwise, returns an empty enumerable.
         /// </summary>
         /// <returns>An enumerable containing the value of this Option if it has a Some value; otherwise, an empty enumerable.</returns>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public IEnumerable<T> ToEnumerable() => (IsSome ? new[] { _content } : Array.Empty<T>())!;
 
         /// <summary>
@@ -151,7 +174,6 @@ namespace UniOption {
         /// <param name="other">The other Option to zip.</param>
         /// <returns>A ValueOption with a tuple of the values if both Options have Some values; otherwise, a ValueOption with a None value.</returns>
         [Pure]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public ValueOption<(T, T2)> Zip<T2>(Option<T2> other) where T2 : class =>
             IsSome && other.IsSome
                 ? ValueOption<(T, T2)>.Some((_content!, other.Reduce(default(T2)!)!))
@@ -164,7 +186,6 @@ namespace UniOption {
         /// <param name="other">The specified value to zip.</param>
         /// <returns>A ValueOption with a tuple of the values if this Option has a Some value; otherwise, a ValueOption with a None value.</returns>
         [Pure]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public ValueOption<(T, T2)> Zip<T2>(T2 other) where T2 : struct =>
             IsSome ? ValueOption<(T, T2)>.Some((_content!, other)) : ValueOption<(T, T2)>.None;
 
@@ -185,7 +206,6 @@ namespace UniOption {
         /// <param name="ifSome">The action to perform if this Option has a Some value.</param>
         /// <param name="ifNone">The action to perform if this Option has a None value.</param>
         /// <returns>This Option.</returns>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public Option<T> Do(Action<T> ifSome, Action ifNone) {
             if (IsSome) ifSome(_content!);
             else ifNone();
