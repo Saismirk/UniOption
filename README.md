@@ -1,4 +1,5 @@
-# UniOption
+UniOption
+---
 Provides an implementation of the **Option** type for Unity. This is similar to the Option type from Rust, or the Maybe type from Haskell.
 Contains types ``Option<T>`` for reference types, and ``ValueOption<T>`` for value types.
 
@@ -99,6 +100,35 @@ Returns a ``ValueOption<(T1,T2)>`` containing the result of the input function i
 ```csharp
 var stringOption = "TestString".ToOption()
                                .Zip(5);//Contains ValueTuple ("TestString", 5)
+```
+
+## Avoiding Closures
+In this example:
+```csharp
+public string DoSomething(string value, Option<string> option) {
+    return option.Match(s => value + s, () => value);    
+}
+```
+A closure is used to capture `value`. This can be detrimental to performance, and should be avoided.
+Instead, the `Match`, `Do` and `DoAsync` methods have overloads that avoid closures by passing the context as a parameter:
+```csharp
+public string DoSomething(string value, Option<string> option) {
+    return option.Match(some:(s, context) => context + s, 
+                        context:value, 
+                        none:context => context);
+}
+```
+In the case of `Do`, if the context needs to be mutated, it may be passed with a `ref` parameter:
+```csharp
+public string DoSomething(int value, Option<string> option) {
+    return option.Do(some:(string s, ref int context) => {
+                        s += context.ToString();
+                        context++;
+                        return s; 
+                    },
+                    context:ref value, 
+                    none:ref int context => context--);
+}
 ```
 
 ## API References
