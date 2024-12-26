@@ -479,11 +479,31 @@ namespace Editor.UniOptionTests {
         }
 
         [Test]
+        public void OptionMatchWithContext() {
+            var option  = "Hello ".ToOption();
+            var context = "World";
+            var result = option.Match(some: (s, c) => (s + c).ToUpper(),
+                                      context: context,
+                                      none: () => "Default");
+            Assert.IsTrue(result == "HELLO WORLD");
+        }
+
+        [Test]
         public void ValueOptionMatch() {
             var option = 5.ToValueOption();
             var result = option.Match(some: s => s.ToString(),
                                       none: () => "Default");
             Assert.IsTrue(result == "5");
+        }
+
+        [Test]
+        public void ValueOptionMatchWithContext() {
+            var option = 5.ToValueOption();
+            var  context = 10;
+            var result = option.Match(some: (s, c) => (s + c).ToString(),
+                                      context: context,
+                                      none: () => "Default");
+            Assert.IsTrue(result == "15");
         }
 
         [Test]
@@ -495,11 +515,51 @@ namespace Editor.UniOptionTests {
         }
 
         [Test]
+        public void OptionMatchNoneWithContext() {
+            var          option  = Option<string>.None;
+            var context = "World";
+            var result = option.Match(some: (s, c) => (s + c).ToUpper(),
+                                      context: context,
+                                      none: () => "Default");
+            Assert.IsTrue(result == "Default");
+        }
+
+        [Test]
+        public void OptionMatchNoneWithContextOnNone() {
+            var option  = Option<string>.None;
+            var context = "World";
+            var result = option.Match(some: (s, c) => (s + c).ToUpper(),
+                                      context: context,
+                                      none: c => "Default " + c);
+            Assert.IsTrue(result == "Default World");
+        }
+
+        [Test]
         public void ValueOptionMatchNone() {
             var option = ValueOption<int>.None;
             var result = option.Match(some: s => s.ToString(),
                                       none: () => "Default");
             Assert.IsTrue(result == "Default");
+        }
+
+        [Test]
+        public void ValueOptionMatchNoneWithContext() {
+            var option  = ValueOption<int>.None;
+            var context = 10;
+            var result = option.Match(some: (s, c) => (s + c).ToString(),
+                                      context: context,
+                                      none: () => "Default");
+            Assert.IsTrue(result == "Default");
+        }
+
+        [Test]
+        public void ValueOptionMatchNoneWithContextOnNone() {
+            var option  = ValueOption<int>.None;
+            var context = 10;
+            var result = option.Match(some: (s, c) => (s + c).ToString(),
+                                      context: context,
+                                      none: c => "Default " + c);
+            Assert.IsTrue(result == "Default 10");
         }
 
         [Test]
