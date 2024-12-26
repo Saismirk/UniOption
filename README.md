@@ -1,5 +1,4 @@
-UniOption
----
+# UniOption
 Provides an implementation of the **Option** type for Unity. This is similar to the Option type from Rust, or the Maybe type from Haskell.
 Contains types ``Option<T>`` for reference types, and ``ValueOption<T>`` for value types.
 
