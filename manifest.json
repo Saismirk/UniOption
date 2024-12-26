@@ -12,6 +12,46 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/UniOption.ActionRef-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UniOption.ActionRef-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UniOption.ActionRef-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UniOption.ActionRef-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UniOption.FuncRef-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UniOption.FuncRef-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UniOption.FuncRef-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UniOption.FuncRef-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/UniOption.IOption.yml",
       "output": {
         ".html": {
@@ -36,6 +76,16 @@
       "output": {
         ".html": {
           "relative_path": "api/UniOption.OptionExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UniOption.SerializableOption-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UniOption.SerializableOption-1.html"
         }
       },
       "version": ""

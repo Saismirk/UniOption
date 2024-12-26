@@ -162,6 +162,31 @@ var result = option.Match(some: s =&gt; s.ToUpper(),
 <pre><code class="lang-csharp">var stringOption = &quot;TestString&quot;.ToOption()
                                .Zip(5);//Contains ValueTuple (&quot;TestString&quot;, 5)
 </code></pre>
+<h2 id="avoiding-closures">Avoiding Closures</h2>
+<p>In this example:</p>
+<pre><code class="lang-csharp">public string DoSomething(string value, Option&lt;string&gt; option) {
+    return option.Match(s =&gt; value + s, () =&gt; value);    
+}
+</code></pre>
+<p>A closure is used to capture <code>value</code>. This can be detrimental to performance, and should be avoided.
+Instead, the <code>Match</code>, <code>Do</code> and <code>DoAsync</code> methods have overloads that avoid closures by passing the context as a parameter:</p>
+<pre><code class="lang-csharp">public string DoSomething(string value, Option&lt;string&gt; option) {
+    return option.Match(some:(s, context) =&gt; context + s, 
+                        context:value, 
+                        none:context =&gt; context);
+}
+</code></pre>
+<p>In the case of <code>Do</code>, if the context needs to be mutated, it may be passed with a <code>ref</code> parameter:</p>
+<pre><code class="lang-csharp">public string DoSomething(int value, Option&lt;string&gt; option) {
+    return option.Do(some:(string s, ref int context) =&gt; {
+                        s += context.ToString();
+                        context++;
+                        return s; 
+                    },
+                    context:ref value, 
+                    none:ref int context =&gt; context--);
+}
+</code></pre>
 <h2 id="api-references">API References</h2>
 <p>API documentation can be found <a href="https://saismirk.github.io/UniOption/api/UniOption.html">here</a>.</p>
 

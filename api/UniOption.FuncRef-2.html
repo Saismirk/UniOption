@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Namespace UniOption | UniOption Documentation </title>
+      <title>Delegate FuncRef&lt;T, TContext&gt; | UniOption Documentation </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Namespace UniOption | UniOption Documentation ">
+      <meta name="title" content="Delegate FuncRef&lt;T, TContext&gt; | UniOption Documentation ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      
+      <meta name="docfx:docurl" content="https://github.com/Saismirk/UniOption/new/main/apiSpec/new?filename=UniOption_FuncRef_2.md&amp;value=---%0Auid%3A%20UniOption.FuncRef%602%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,61 +84,63 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="UniOption">
+        <article data-uid="UniOption.FuncRef`2">
 
-  <h1 id="UniOption" data-uid="UniOption" class="text-break">Namespace UniOption</h1>
-  <div class="markdown level0 summary"></div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
 
-    <h3 id="classes">
-Classes
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="UniOption.OptionExtensions.html">OptionExtensions</a></dt>
-      <dd></dd>
-    </dl>
-    <h3 id="structs">
-Structs
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="UniOption.Option-1.html">Option&lt;T&gt;</a></dt>
-      <dd></dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="UniOption.SerializableOption-1.html">SerializableOption&lt;T&gt;</a></dt>
-      <dd></dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="UniOption.ValueOption-1.html">ValueOption&lt;T&gt;</a></dt>
-      <dd></dd>
-    </dl>
-    <h3 id="interfaces">
-Interfaces
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="UniOption.IOption.html">IOption</a></dt>
-      <dd></dd>
-    </dl>
-    <h3 id="delegates">
-Delegates
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="UniOption.ActionRef-1.html">ActionRef&lt;TContext&gt;</a></dt>
-      <dd></dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="UniOption.ActionRef-2.html">ActionRef&lt;T, TContext&gt;</a></dt>
-      <dd></dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="UniOption.FuncRef-1.html">FuncRef&lt;TContext&gt;</a></dt>
-      <dd></dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="UniOption.FuncRef-2.html">FuncRef&lt;T, TContext&gt;</a></dt>
-      <dd></dd>
-    </dl>
+
+  <h1 id="UniOption_FuncRef_2" data-uid="UniOption.FuncRef`2" class="text-break">
+Delegate FuncRef&lt;T, TContext&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/Saismirk/UniOption/blob/main/src/UniOption/Assets/Plugins/UniOption/Runtime/ActionRef.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="UniOption.html">UniOption</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>UniOption.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public delegate UniTask FuncRef&lt;in T, TContext&gt;(T value, ref TContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">T</span></dt>
+    <dd></dd>
+    <dt><code>context</code> <span class="xref">TContext</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">UniTask</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+    <dt><code>TContext</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="UniOption.OptionExtensions.html#UniOption_OptionExtensions_ToOption__1___0_">OptionExtensions.ToOption&lt;T&gt;(T)</a>
+  </div>
+  </dd></dl>
+
+
+
+
 
 
 </article>
