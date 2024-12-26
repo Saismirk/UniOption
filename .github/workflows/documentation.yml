@@ -22,7 +22,7 @@ jobs:
 
       - name: Install DocFx
         run: |
-          dotnet tool install --global docfx
+          dotnet tool install --global docfx --version 2.76.0
           
       - name: Generate Docs
         run: |
